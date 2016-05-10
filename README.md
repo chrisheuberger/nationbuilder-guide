@@ -6,6 +6,9 @@
 #### Notes
 
 * Using the Jekyll template [Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/).
-* Using GitHub Pages [Project Page](https://jekyllrb.com/docs/github-pages/)
 * Table of contents on internal pages
 * Stylesheet using Sass
+
+#### Site
+
+[https://radishlab.github.io/nationbuilder-guide/](https://radishlab.github.io/nationbuilder-guide/)

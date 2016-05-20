@@ -36,8 +36,8 @@ titlecase: true
 # Site owner
 owner:
   name: Radish Lab
-  email: webamaster@radishlab.com
-  twitter: "@RadishLab"
+  email: webmaster@radishlab.com
+  twitter: "RadishLab"
   google:
     ad-client:
     ad-slot:

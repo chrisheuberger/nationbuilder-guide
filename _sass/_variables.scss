@@ -6,8 +6,8 @@
    Typography variables
    ========================================================================== */
 
-$base-font                   	: Georgia,Times,"Times New Roman",serif;
-$heading-font                	: "Helvetica Neue","Segoe UI",Arial,sans-serif;
+$base-font                   	: "omnes-pro",sans-serif;
+$heading-font                	: "omnes-pro",sans-serif;
 $caption-font                	: $base-font;
 $code-font                   	: monospace;
 $alt-font                    	: $heading-font;
@@ -23,6 +23,11 @@ $border-radius               	: 3px;
 
 $white                        : #fff;
 $black                        : #000;
+$blue                         : #65B6CF;
+$lightblue                    : #C6E4F5;
+$green                        : #9AE1B2;
+$darkblue                     : #34314c;
+
 
 $body-color                  	: #ebebeb;
 
@@ -34,7 +39,7 @@ $comp-color                  	: complement($base-color);
 $border-color                	: #ddd;
 $link-color                  	: #222;
 
-$primary-color               	: $black;
+$primary-color               	: $darkblue;
 $success-color               	: #2ecc71;
 $warning-color               	: #f1c40f;
 $danger-color                	: #e74c3c;
@@ -81,7 +86,7 @@ $form-font-size              	: $doc-font-size;
    ========================================================================== */
 
 $sliding-menu-border-color	 	 : $black;
-$sliding-menu-background 		   : $black;
+$sliding-menu-background 		   : $darkblue;
 $sliding-menu-color 	 		     : $white;
 $sliding-menu-background-hover : $black;
 $sliding-menu-color-hover	 	   : $white;

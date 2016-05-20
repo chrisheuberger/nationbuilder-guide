@@ -3,14 +3,14 @@
 - title: Fundamentals
   url: /fundamentals/
   excerpt: "NationBuilder Basics and Development Overview"
-  image: fundamentals.png
+  image: preview-fundamentals.png
 
 - title: Website
   url: /website/
   excerpt: "Principles and Best Practices for Developing Websites with NationBuilder"
-  image: website.png
+  image: preview-website.png
 
 - title: Community
   url: /community/
   excerpt: "Connecting Users and Building Community with NationBuilder"
-  image: community.png
+  image: preview-community.png

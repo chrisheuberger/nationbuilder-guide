@@ -10,6 +10,7 @@ body {
 	font-family: $base-font;
 	color: $text-color;
 	@include font-size(16);
+  /*background-image: url(../images/blue-cube-pattern-background.jpg);*/
 }
 
 p {
@@ -27,7 +28,10 @@ h1, h2, h3, h4, h5, h6 {
 	text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 h1 {
-	@include font-size(36);
+	@include font-size(96);
+  font-weight: 200;
+  margin-top: 0;
+  color: $green;
 }
 h2 {
 	@include font-size(32);
@@ -81,7 +85,7 @@ blockquote {
   }
   cite {
     font-family: $base-font;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     @include font-size(18);
   }
@@ -225,7 +229,7 @@ th {
 	padding: (0px + $doc-line-height) / 2;
 	padding: (0rem + ($doc-line-height / $doc-font-size)) / 2;
 	font-family: $alt-font;
-	font-weight: bold;
+	font-weight: 600;
 	text-align: left;
 	background-color: $table-header-color;
 	border-bottom: 1px solid darken($border-color, 15%);
@@ -283,7 +287,7 @@ select {
 }
 
 label {
-	font-weight: bold;
+	font-weight: 600;
 	font-family: $alt-font;
 	margin-bottom: (0px + $doc-line-height) / 4;
 	margin-bottom: (0rem + ($doc-line-height / $doc-font-size)) / 4;
@@ -383,6 +387,7 @@ nav {
     list-style: none;
   }
   a {
+    letter-spacing: .15em;
     text-decoration: none;
   }
 }

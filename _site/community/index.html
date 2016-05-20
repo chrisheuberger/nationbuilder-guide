@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Building Community with NationBuilder • A Mini Guide to NationBuilder</title>
+    <meta name="description" content="Connecting Users and Building Community with NationBuilder">
+    
+    
+    	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="Building Community with NationBuilder">
+	<meta name="twitter:description" content="Connecting Users and Building Community with NationBuilder">
+	<meta name="twitter:site" content="@RadishLab">
+	<meta name="twitter:creator" content="@RadishLab">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="/images/preview-community.png">
+	
+	<!-- Open Graph -->
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Building Community with NationBuilder">
+	<meta property="og:description" content="Connecting Users and Building Community with NationBuilder">
+	<meta property="og:url" content="/community/">
+	<meta property="og:site_name" content="A Mini Guide to NationBuilder">
+
+    <link rel="canonical" href="/community/">
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="A Mini Guide to NationBuilder Atom Feed">
+    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <script src="https://use.typekit.net/qsr8win.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="/js/vendor/html5shiv.min.js"></script>
+      <script src="/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body id="js-body">
+    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
+
+    <header id="masthead">
+  <div class="inner-wrap">
+    <a href="/" class="site-title">A Mini Guide to NationBuilder</a>
+    <nav role="navigation" class="menu top-menu">
+        <!-- <ul class="menu-item">
+	<li class="home"><a href="/">A Mini Guide to NationBuilder</a></li>
+	
+    
+    <li><a href="/fundamentals/" >Fundamentals</a></li>
+  
+    
+    <li><a href="/website/" >Website</a></li>
+  
+    
+    <li><a href="/community/" >Community</a></li>
+  
+</ul> -->
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+
+    <nav role="navigation" id="js-menu" class="sliding-menu-content">
+  <h5>A Mini Guide to NationBuilder <span>Table of Contents</span></h5>
+  <ul class="menu-item">
+    <li>
+      <a href="/fundamentals/">
+        <img src="/images/preview-fundamentals.png" alt="teaser" class="teaser">
+        <div class="title">Fundamentals</div>
+        <p class="excerpt">NationBuilder Basics and Development Overview</p>
+      </a>
+    </li><li>
+      <a href="/website/">
+        <img src="/images/preview-website.png" alt="teaser" class="teaser">
+        <div class="title">Website</div>
+        <p class="excerpt">Principles and Best Practices for Developing Websites with NationBuilder</p>
+      </a>
+    </li><li>
+      <a href="/community/">
+        <img src="/images/preview-community.png" alt="teaser" class="teaser">
+        <div class="title">Community</div>
+        <p class="excerpt">Connecting Users and Building Community with NationBuilder</p>
+      </a>
+    </li>
+  </ul>
+</nav>
+<button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
+  <span class="nav-lines"></span>
+</button>
+
+<div id="js-menu-screen" class="menu-screen"></div>
+
+
+    <div id="page-wrapper">
+      <div id="main" role="main">
+	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+		
+		
+		<div class="page-title">
+			<h1>Building Community with NationBuilder</h1>
+		</div>
+		<div class="inner-wrap">
+			<div id="content" class="page-content" itemprop="articleBody">
+				<h2 id="building-a-community-on-nationbuilder">Building a Community on NationBuilder</h2>
+
+<nav class="toc">
+<ul id="markdown-toc">
+  <li><a href="#people" id="markdown-toc-people">People</a></li>
+  <li><a href="#tagging" id="markdown-toc-tagging">Tagging</a></li>
+  <li><a href="#communication" id="markdown-toc-communication">Communication</a></li>
+</ul>
+
+</nav>
+
+<h1 id="people">People</h1>
+
+<p><img src="../images/bullhorn.png" alt="bullhorn" /></p>
+
+<p>Now, I’m going to cover how NationBuilder keeps track of users on your site and how you can communicate with those users. This is a big part of the power behind the NationBuilder platform which simplifies this connection in some really useful ways.</p>
+
+<p>Let’s begin in the People section. This is where any user that interacts with your site is stored and accessed. All people are essentially on a single list and filtered with tags and such. When a user fills out a form for the first time, NationBuilder will create a record in the People section with the data routed to their corresponding fields.</p>
+
+<p>As an example, this is the template of a default join page:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"span6"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"signup_first_name"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/label&gt;</span>
+  {% text_field "first_name", class:"text" %}
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"span6"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"signup_email"</span><span class="nt">&gt;</span>Email<span class="nt">&lt;/label&gt;</span>
+  {% email_field "email", class:"text" %}
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>The first liquid call, <code>{% text_field "first_name", class:"text" %}</code>, is going to populate the <strong>First Name</strong> field in the people section. But the actual page will render the normal form HTML.</p>
+
+<p>So…</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% text_field "first_name", class:"text" %}</code></pre></figure>
+
+<p>becomes:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"signup_first_name"</span> <span class="na">name=</span><span class="s">"signup[first_name]"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>And the email field renders similarly:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% email_field "email", class:"text" %}</code></pre></figure>
+
+<p>which becomes:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"signup_email"</span> <span class="na">name=</span><span class="s">"signup[email]"</span> <span class="na">type=</span><span class="s">"email"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>The first attribute (<strong>text_field</strong> and <strong>email_field</strong>) defines the input type, and the class field allows you to pass classes through to the HTML tag. The ID and name are automatically generated because they change depending on the page type (<strong>signup</strong>, <strong>petition</strong>, <strong>event RSVP</strong>, etc.) in question.</p>
+
+<p><img src="../images/tag.png" alt="People Tag" /></p>
+
+<h1 id="tagging">Tagging</h1>
+
+<p>A tag can be added automatically to a person when they take an action on your website or contact a broadcaster. These tags sort people in your database based on a particular action they took. So anyone who signs a particular petition, for example, would then have that tag.</p>
+
+<p>If you want to add, edit, merge, or generally clean up these people tags, go to <strong>People &gt; Tags &gt; View all</strong>.</p>
+
+<p>Once there, any existing tag within your system can also be added to a person manually by going to <strong>People</strong> and then clicking the add tag button right from a person’s profile preview.</p>
+
+<p>To add a tag to a list of people, you would do a <a href="http://nationbuilder.com/how_to_batch">batch update</a>.</p>
+
+<p>You can also <a href="http://nationbuilder.com/how_to_filter">filter people by tag</a> in order to target any tag combination. That’s how you can build a recipient list for an email blast that targets, for example, anyone who has ever signed a petition or anyone who has signed <em>both</em> petition A and petition B, etc. Once you build a filter this way, you can save it and then use it to send out an <a href="http://nationbuilder.com/how_to_create_an_email_blast">email blast</a>.</p>
+
+<p><img src="../images/people.png" alt="people" /></p>
+
+<h1 id="communication">Communication</h1>
+
+<p>People in the NationBuilder database are either Supporters, Prospects, or Non-Supporters.</p>
+
+<ul>
+  <li><strong>A Supporter</strong> has explicitly opted into receiving bulk communications (email blasts, sms blasts).</li>
+  <li><strong>A Non-Supporter</strong> has explicitly opted out of receiving bulk communications.</li>
+  <li><strong>A Prospect</strong> has neither opted into nor out of bulk communications, but is in your database for some reason (tweeted at you, emailed a broadcaster, voter file import, etc.)</li>
+</ul>
+
+<p>NationBuilder restricts users from being able to send out email blasts to prospects and non-supporters, and will automatically remove those profiles from the recipient list if they’re on it. When a user signs up for a email blast, really what they’re doing is:</p>
+
+<ol>
+  <li>Opting into email support and becoming a “supporter” of the nation</li>
+  <li>Assigning a tag to themselves that is used to send mailings via. For example, there exist tags like <strong>Weekly Newsletter tag</strong>, <strong>Monthly Newsletter tag</strong>, etc. and when an email blast is sent, the recipient list is set to <strong>users tagged with Weekly Newsletter</strong>.</li>
+</ol>
+
+<p>More on formatting and controlling email blasts <a href="http://nationbuilder.com/how_to_create_an_email_blast">here</a>.</p>
+
+<p>You can also assign a tag to be used as a subscription option, so that “unsubscribing” actually becomes removing the tag from that profile. Full details <a href="http://nationbuilder.com/how_to_use_the_unsubscribe_page">here</a>.</p>
+
+<p>And lastly, say <em>you</em> want to be notified whenever someone takes an action on a page. First, make sure whatever email address you want to use is set up as an admin user. To do this, log in with that email address and go to <strong>Settings &gt; Your account &gt; Email notifications</strong> and check the box next to whichever action you wish to trigger an email. The column refers to who would trigger that email. Instructions are <a href="http://nationbuilder.com/notification_emails#adjust">here</a>.</p>
+
+<p><img src="../images/email-notifications.png" alt="email notifications" /></p>
+
+<p>And that’s a basic introduction to communicating with your users on NationBuilder. The next level of engagement would be <a href="http://nationbuilder.com/create_paths">paths</a> which is NationBuilder’s way of allowing you to keep users on track toward a specific goal.</p>
+
+<p>Check back for my last installment in this series on memberships, signups, and actions. Until then!</p>
+
+				<hr />
+				<footer class="page-footer">
+					
+					<div class="inline-btn">
+	<a class="btn-social twitter" href="https://twitter.com/intent/tweet?text=Building%20Community%20with%20NationBuilder&amp;url=/community/&amp;via=RadishLab" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
+	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=/community/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
+	<!-- <a class="btn-social google-plus"  href="https://plus.google.com/share?url=/community/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a> -->
+</div><!-- /.share-this -->
+
+					<div class="page-meta">
+	<p>Updated <time datetime="2016-03-30T00:00:00Z" itemprop="datePublished">March 30, 2016</time></p>
+</div><!-- /.page-meta -->
+				</footer><!-- /.footer -->
+				<aside>
+					
+				</aside>
+			</div><!-- /.content -->
+		</div><!-- /.inner-wrap -->
+		
+	</article><!-- ./wrap -->
+</div><!-- /#main -->
+
+      <footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+			<li><a href="/fundamentals/" >Fundamentals</a></li>
+		
+      
+			<li><a href="/website/" >Website</a></li>
+		
+      
+			<li><a href="/community/" >Community</a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2016 <a href="">A Mini Guide to NationBuilder</a>.</p>
+</footer>
+
+    </div>
+
+    <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>

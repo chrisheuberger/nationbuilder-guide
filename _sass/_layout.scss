@@ -26,10 +26,11 @@
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 	height: $masthead-height;
 	text-decoration: none;
-	color: $black;
+	color: $darkblue;
 	font-family: $alt-font;
-	font-weight: 700;
-	@include font-size(20,no);
+	font-weight: 600;
+  letter-spacing: .15em;
+	@include font-size(16,no);
 	line-height: .5 * $masthead-height; // half the height to center vertically
 	text-transform: uppercase;
 }
@@ -71,7 +72,7 @@
 			}
 			&:after {
 				width: 0;
-				background: $black;
+				background: $darkblue;
 			}
 			&:active:after,
 			&:hover:after {
@@ -102,10 +103,10 @@
 	}
 	li {
 		a {
-			font-weight: 700;
+			font-weight: 600;
 			@include font-size(16,no);
 			line-height: .5 * $masthead-height; // half the height to center vertically
-			color: $black;
+			color: $darkblue;
 			text-transform: uppercase;
 		}
 	}
@@ -115,9 +116,9 @@
 
 .bottom-menu {
 	@include clearfix;
-	font-weight: 700;
+	font-weight: 600;
 	a {
-		color: lighten($black,60);
+		color: lighten($darkblue,60);
 	}
 }
 
@@ -183,7 +184,7 @@
 				p{
 					@include font-size(14,no);
 					font-family: $alt-font;
-					color: lighten($black,60);
+					color: lighten($darkblue,60);
 				}
 			}
 		}
@@ -284,7 +285,7 @@
 		right: 0;
 		margin: 0 auto;
 		padding: 10px 15px;
-		background-color: rgba($black,.5);
+		background-color: rgba($darkblue,.5);
 		color: $white;
 		font-family: $alt-font;
 		@include font-size(12,no);
@@ -342,9 +343,9 @@
   /* Copyright text */
 	.copyright {
 		@include font-size(12);
-		color: lighten($black,60);
+		color: lighten($darkblue,60);
 		a {
-			color: lighten($black,60);
+			color: lighten($darkblue,60);
 			text-decoration: none;
 		}
 	}

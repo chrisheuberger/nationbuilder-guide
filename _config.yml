@@ -5,6 +5,7 @@ description: "Radish Lab's Tips & Techniques for using the NationBuilder platfor
 logo: radish-lab-square-logo-twitter.png # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale: en
+baseurl: 
 url: 
 
 # Jekyll configuration
@@ -36,8 +37,8 @@ titlecase: true
 # Site owner
 owner:
   name: Radish Lab
-  email: webamaster@radishlab.com
-  twitter: "@RadishLab"
+  email: webmaster@radishlab.com
+  twitter: "RadishLab"
   google:
     ad-client:
     ad-slot:

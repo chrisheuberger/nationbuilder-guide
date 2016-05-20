@@ -16,7 +16,7 @@ We won't cover every topic with detail and depth, but we will provide some high-
 
 Radish Lab is a full-service interactive creative agency based in Brooklyn, New York, focusing on people and projects committed to social change. We build innovative websites, applications, data visualizations, and interactive experiences for non-profits, cultural institutions, academia, and related organizations.
 
-We're also certified NationBuilder Architects and committed to the open exchange of knowledge and inspiration. If you have any suggestions or questions, please let us know. And if you'd like to contribute to this project, don't hesistate to <a href="#">send a pull request</a> or <a href="#">email us</a>.
+We're also certified NationBuilder Architects and committed to the open exchange of knowledge and inspiration. If you have any suggestions or questions, please let us know. And if you'd like to contribute to this project, don't hesistate to [send a pull request](https://github.com/RadishLab/nationbuilder-guide) or [email us](mailto:chris@radishlab.com).
 
 ## What is NationBuilder
 
@@ -29,9 +29,3 @@ And that is no easy feat.
 For a product like this to be universally adaptable, it has to make trade-offs, which can be limiting. So you need to be aware of its restrictions as well as its functional attributes. NationBuilder is a complex piece of software, but the more you work with it, the more you see the thought that went into making every piece connect as seamlessly as possible.
 
 Radish Lab is now a certified NationBuilder architect so yes, I am biased. We don’t recommend NationBuilder for every project, but it can be a great option for certain types of clients, including nonprofits, educational institutions, advocacy groups, and political organizations; anyone who wants to raise funds, hold an event, boost awareness, spark action, or create a movement.
-
-<div class="tiles">
-{% for post in site.posts %}
-	{% include post-grid.html %}
-{% endfor %}
-</div><!-- /.tiles -->

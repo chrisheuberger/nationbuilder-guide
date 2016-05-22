@@ -35,8 +35,8 @@ a.sliding-title-link {
 }
 .site-title {
 	@include row;
-	@include media($large) {
-		@include span-columns(4);
+	@include media($medium) {
+		@include span-columns(6);
 	}
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 	height: $masthead-height;
@@ -49,7 +49,6 @@ a.sliding-title-link {
 	line-height: .5 * $masthead-height; // half the height to center vertically
 	text-transform: uppercase;
 }
-
 
 /*
    Menus
@@ -103,10 +102,7 @@ a.sliding-title-link {
 	display: none;
 	position: relative;
 	@include media($medium) {
-		@include span-columns(12);
-	}
-	@include media($large) {
-		@include span-columns(7);
+		@include span-columns(6);
 		ul {
 			position: absolute;
 			right: 0;

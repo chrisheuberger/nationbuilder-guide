@@ -36,6 +36,9 @@
   cursor: pointer;
   z-index: 20;
   box-sizing: border-box;
+  @include media($medium) {
+    display: none;
+  }
   &:hover {
     background: $black;
   }
@@ -140,6 +143,11 @@
       @include media($small) {
         width: 150px;
       }
+      @include media($micro) {
+        display: inline-block;
+        position: relative;
+        width: 60%;
+      }        
     }
     a:hover .teaser {
       opacity: 1;
@@ -154,6 +162,9 @@
         margin-left: 170px;
         @include font-size(32,no);
       }
+      @include media($micro) {
+        margin-left: 0;
+      }
     }
     .excerpt {
       margin-top: 0;
@@ -162,6 +173,9 @@
       @include media($small) {
         margin-left: 170px;
         @include font-size(16,no);
+      }
+      @include media($micro) {
+        margin-left: 0;
       }
     }
   }

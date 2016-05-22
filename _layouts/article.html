@@ -7,7 +7,7 @@ layout: default
 		{% if page.image.feature %}
 		<div class="page-feature">
 			<div class="page-image">
-				<img src="{{ site.url }}/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
+				<img src="{{ site.baseurl }}{{ site.baseurl }}{{ site.url }}/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
 				{% if page.image.credit %}{% include image-credit.html %}{% endif %}
 			</div><!-- /.page-image -->
 		</div><!-- /.page-feature -->
@@ -23,7 +23,6 @@ layout: default
 				<footer class="page-footer">
 					{% if page.categories %}{% include page-author.html %}{% endif %}
 					{% if page.share != false %}{% include share-this.html %}{% endif %}
-					{% include page-meta.html %}
 				</footer><!-- /.footer -->
 				<aside>
 					{% if page.comments == true %}{% include comments.html %}{% endif %}

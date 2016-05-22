@@ -4,6 +4,8 @@ permalink: /
 title: "A Mini Guide to NationBuilder"
 ---
 
+![NationBuilder guide](../images/landing-hero.png){: class="hero"}
+
 #### Tips & Techniques by Radish Lab
 
 ## Welcome to Radish Lab's mini guide to NationBuilder!
@@ -16,7 +18,7 @@ We won't cover every topic with detail and depth, but we will provide some high-
 
 Radish Lab is a full-service interactive creative agency based in Brooklyn, New York, focusing on people and projects committed to social change. We build innovative websites, applications, data visualizations, and interactive experiences for non-profits, cultural institutions, academia, and related organizations.
 
-We're also certified NationBuilder Architects and committed to the open exchange of knowledge and inspiration. If you have any suggestions or questions, please let us know. And if you'd like to contribute to this project, don't hesistate to [send a pull request](https://github.com/RadishLab/nationbuilder-guide) or [email us](mailto:chris@radishlab.com).
+We're also certified NationBuilder Architects and committed to the open exchange of knowledge and inspiration. If you have any suggestions or questions, please let us know. And if you'd like to contribute to this project, don't hesistate to [send a pull request](https://github.com/RadishLab/nationbuilder-guide){:target="_blank"} or [email us](mailto:chris@radishlab.com){:target="_blank"}.
 
 ## What is NationBuilder
 

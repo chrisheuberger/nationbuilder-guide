@@ -112,7 +112,9 @@
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<h2 id="developing-a-website-on-nationbuilder">Developing a Website on NationBuilder</h2>
+				<p><img src="../images/website-hero.png" alt="NationBuilder guide" class="hero" /></p>
+
+<h2 id="developing-a-website-on-nationbuilder">Developing a Website on NationBuilder</h2>
 
 <nav class="toc">
 <ul id="markdown-toc">
@@ -155,7 +157,7 @@
 
 <p>Both of these examples use a Liquid object to determine something about the user and display different content based on that. Building on that, let’s see how to target a user’s membership type using conditionals.</p>
 
-<p>For example, to make certain pages (or parts of pages) only viewable to certain membership types, first set up <a href="http://nationbuilder.com/create_membership_types">membership types</a> in your nation. Next, add a member type in the NationBuilder control panel called Sustaining. Lastly, wrap your page content inside Liquid conditionals that check for membership levels or tags—or otherwise hide the content—like this:</p>
+<p>For example, to make certain pages (or parts of pages) only viewable to certain membership types, first set up <a href="http://nationbuilder.com/create_membership_types" target="_blank">membership types</a> in your nation. Next, add a member type in the NationBuilder control panel called Sustaining. Lastly, wrap your page content inside Liquid conditionals that check for membership levels or tags—or otherwise hide the content—like this:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">{% if request.signup.membership_level_name contains "sustaining" %}
   <span class="c">&lt;!-- Paying Member Content --&gt;</span>
@@ -237,7 +239,7 @@
 
 <h1 id="images-assets-and-subpages">Images, Assets, and Subpages</h1>
 
-<p>In this, my fourth post on developing with NationBuilder, I’m going to cover some useful concepts and techniques for working with images and subpages. If you want to check out previous posts, there’s one on <a href="http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/">getting started</a>, <a href="http://radishlab.com/2015/12/introduction-nationbuilder-liquid-basics/">Liquid basics</a>, and <a href="http://radishlab.com/2015/12/an-introduction-to-nationbuilder-for-loops-and-conditionals/">Liquid logic</a>.</p>
+<p>In this, my fourth post on developing with NationBuilder, I’m going to cover some useful concepts and techniques for working with images and subpages. If you want to check out previous posts, there’s one on <a href="http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/" target="_blank">getting started</a>, <a href="http://radishlab.com/2015/12/introduction-nationbuilder-liquid-basics/" target="_blank">Liquid basics</a>, and <a href="http://radishlab.com/2015/12/an-introduction-to-nationbuilder-for-loops-and-conditionals/" target="_blank">Liquid logic</a>.</p>
 
 <p><img src="../images/assets.png" alt="images and assets" /></p>
 
@@ -267,7 +269,7 @@
 
 <p>An attachment is a file that is uploaded to the files section of a page. The meta image is defined under the <strong>Social Media</strong> section of the page settings tab, and is used primarily to define a meta image for use when sharing on Facebook, Twitter, etc. A page can have only one meta image, but can have multiple attachments.</p>
 
-<p><a href="http://nationbuilder.com/liquid_template_examples#imagefeed">These snippets</a> can be used to display images from a page when you don’t know the filename but know that the files will be attachments on that page, which is why they’re housed in for loops.</p>
+<p><a href="http://nationbuilder.com/liquid_template_examples#imagefeed" target="_blank">These snippets</a> can be used to display images from a page when you don’t know the filename but know that the files will be attachments on that page, which is why they’re housed in for loops.</p>
 
 <p><img src="../images/subpages.png" alt="nb-subpages" /></p>
 
@@ -315,7 +317,7 @@
 
 <p><img src="../images/signup.png" alt="signup form" /></p>
 
-<p>Welcome to my sixth and final post on developing websites in NationBuilder. We’ve covered <a href="http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/">getting started</a>, <a href="http://radishlab.com/2015/12/introduction-nationbuilder-liquid-basics/">using Liquid</a>, <a href="http://radishlab.com/2015/12/an-introduction-to-nationbuilder-for-loops-and-conditionals/">applying logic and tags</a>, <a href="http://radishlab.com/2016/01/an-introduction-to-nationbuilder-images-assets-and-subpages/">organizing assets and pages</a>, and <a href="http://radishlab.com/2016/01/introduction-nationbuilder-people-communication/">communicating with your users</a>. But today, we’re going to wrap it up with some tips and tricks around signing up members and enabling actions. That is, how do you allow your users to engage with <em>you</em>?</p>
+<p>Welcome to my sixth and final post on developing websites in NationBuilder. We’ve covered <a href="http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/" target="_blank">getting started</a>, <a href="http://radishlab.com/2015/12/introduction-nationbuilder-liquid-basics/" target="_blank">using Liquid</a>, <a href="http://radishlab.com/2015/12/an-introduction-to-nationbuilder-for-loops-and-conditionals/">applying logic and tags</a>, <a href="http://radishlab.com/2016/01/an-introduction-to-nationbuilder-images-assets-and-subpages/">organizing assets and pages</a>, and <a href="http://radishlab.com/2016/01/introduction-nationbuilder-people-communication/" target="_blank">communicating with your users</a>. But today, we’re going to wrap it up with some tips and tricks around signing up members and enabling actions. That is, how do you allow your users to engage with <em>you</em>?</p>
 
 <p>We’ll start in the NationBuilder Control Panel, where you can customize action settings for any action page type.</p>
 
@@ -325,7 +327,7 @@
 
 <p>Many NationBuilder page types allow for visitors to take an action like sign a petition, make a donation, or RSVP to an event. And for each action, there are settings you can control by going to <strong>[Page name] &gt; Settings &gt; [Action] Settings</strong>. So for a page with page type <strong>Signup</strong>, that tab would be labeled <strong>Signup settings</strong>. This is where you can do things like automatically add tags to any person who signs up on your site.</p>
 
-<p>To add or remove a tag associated with a signup form, go to: <strong>Signup settings &gt; Radio buttons</strong>. You can allow users to select multiple tags here: <strong>Signup settings &gt; Basics</strong> in which case the <strong>Radio buttons</strong> section will be renamed <strong>Checkboxes</strong>. For more info, check out how to <a href="http://nationbuilder.com/how_to_signup#create">create a new tag for a signup form</a>.</p>
+<p>To add or remove a tag associated with a signup form, go to: <strong>Signup settings &gt; Radio buttons</strong>. You can allow users to select multiple tags here: <strong>Signup settings &gt; Basics</strong> in which case the <strong>Radio buttons</strong> section will be renamed <strong>Checkboxes</strong>. For more info, check out how to <a href="http://nationbuilder.com/how_to_signup#create" target="_blank">create a new tag for a signup form</a>.</p>
 
 <p><img src="../images/unlock.png" alt="unlock" /></p>
 
@@ -333,7 +335,7 @@
 
 <p>Very often, you want a field in your form that NationBuilder doesn’t have as a default. To include such a field, you’ll need to do a bit of customizing.</p>
 
-<p>The first step to customizing forms is knowing how to direct the data to the correct place. Data from forms are either stored in one of the already existing signup fields (<a href="http://nationbuilder.com/signup_variables">signup variables</a>) or in <a href="http://nationbuilder.com/when_to_use_custom_fields">custom fields</a>.</p>
+<p>The first step to customizing forms is knowing how to direct the data to the correct place. Data from forms are either stored in one of the already existing signup fields (<a href="http://nationbuilder.com/signup_variables" target="_blank">signup variables</a>) or in <a href="http://nationbuilder.com/when_to_use_custom_fields" target="_blank">custom fields</a>.</p>
 
 <p>To allow users to signup for an email blast, for example, you would create a signup page (or use the existing join page) to control the settings (tag, path, followup, membership assignments, redirects after form submission, whether or not autoresponses are triggered, etc.), and then create a partial HTML template to control the form fields you’d be asking for. You’d associate the two via either the <strong>subpage</strong> or <strong>include</strong> Liquid tags.</p>
 
@@ -369,7 +371,7 @@
 
 <p>So there you have it: our six-part introductory development guide to help you harness the power of NationBuilder. Thanks for coming along with me!</p>
 
-<p>If you have any questions or need some help with your site, just <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#104;&#114;&#105;&#115;&#064;&#114;&#097;&#100;&#105;&#115;&#104;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">reach out</a>, and we’d be glad to help. And in the meantime, may your theme always sync and may your Liquid never fail to render.</p>
+<p>If you have any questions or need some help with your site, just <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#104;&#114;&#105;&#115;&#064;&#114;&#097;&#100;&#105;&#115;&#104;&#108;&#097;&#098;&#046;&#099;&#111;&#109;" target="_blank">reach out</a>, and we’d be glad to help. And in the meantime, may your theme always sync and may your Liquid never fail to render.</p>
 
 				<hr />
 				<footer class="page-footer">

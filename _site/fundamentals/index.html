@@ -112,7 +112,9 @@
 		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
-				<h2 id="the-fundamentals-of-nationbuilder">The Fundamentals of NationBuilder</h2>
+				<p><img src="../images/fundamentals-hero.png" alt="NationBuilder guide" class="hero" /></p>
+
+<h2 id="the-fundamentals-of-nationbuilder">The Fundamentals of NationBuilder</h2>
 
 <nav class="toc">
 <ul id="markdown-toc">
@@ -124,13 +126,13 @@
 
 <h1 id="hello-nationbuilder">Hello NationBuilder</h1>
 
-<p><a href="http://nationbuilder.com/website">NationBuilder</a> is a powerful tool for organizing people online. But just what does that mean?</p>
+<p><a href="http://nationbuilder.com/website" target="_blank">NationBuilder</a> is a powerful tool for organizing people online. But just what does that mean?</p>
 
 <p>Well you can think of it as a platform for making websites that also provides a host of integrated tools to help coordinate communities around a common goal, with the website as one part of a multifaceted approach. So in that way, NationBuilder is conceptually different from other platforms on the web and quite a bit more ambitious. It connects your site to a ready-made framework for organizing, coordinating, and communicating with users. It also includes powerful financial tools necessary for many initiatives, and provides optimal control over how it all goes together. NationBuilder serves up an impressive breadth and depth of functionality while still being incredibly customizable, scalable, and flexible.</p>
 
 <p>And that is no easy feat.</p>
 
-<p>For a product like this to be universally adaptable, it has to make trade-offs, which can be limiting. So you need to be aware of its restrictions as well as its functional attributes. NationBuilder is a complex piece of software, but the more you work with it, the more you see the thought that went into making every piece connect as seamlessly as possible. Radish Lab is now a certified NationBuilder <a href="http://nationbuilder.com/radishlab">architect</a> so yes, I am biased. We don’t recommend NationBuilder for every project, but it can be a great option for certain types of clients, including nonprofits, educational institutions, advocacy groups, and political organizations; anyone who wants to raise funds, hold an event, boost awareness, spark action, or create a movement.</p>
+<p>For a product like this to be universally adaptable, it has to make trade-offs, which can be limiting. So you need to be aware of its restrictions as well as its functional attributes. NationBuilder is a complex piece of software, but the more you work with it, the more you see the thought that went into making every piece connect as seamlessly as possible. Radish Lab is now a certified NationBuilder <a href="http://nationbuilder.com/radishlab" target="_blank">architect</a> so yes, I am biased. We don’t recommend NationBuilder for every project, but it can be a great option for certain types of clients, including nonprofits, educational institutions, advocacy groups, and political organizations; anyone who wants to raise funds, hold an event, boost awareness, spark action, or create a movement.</p>
 
 <div style="text-align: center;"><iframe src="https://player.vimeo.com/video/129819511?color=62b6cf&amp;title=0&amp;byline=0&amp;portrait=0" width="600" height="376" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 
@@ -144,13 +146,13 @@
 
 <p>I’m going to get a bit technical here, so proceed with caution.</p>
 
-<p>NationBuilder is built with <a href="http://rubyonrails.org/">Ruby on Rails</a> and uses PostgreSQL for its back-end database, but not much back-end expertise is needed. You also have solid front-end control as well as easy monitoring of comments and activity feeds, advanced spam blocking, reliable server scaling, recruiter and referral tracking, full control over SEO, and built-in Google Analytics.</p>
+<p>NationBuilder is built with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> and uses PostgreSQL for its back-end database, but not much back-end expertise is needed. You also have solid front-end control as well as easy monitoring of comments and activity feeds, advanced spam blocking, reliable server scaling, recruiter and referral tracking, full control over SEO, and built-in Google Analytics.</p>
 
-<p>NationBuilder uses <a href="http://nationbuilder.com/theme_sync">Theme Sync</a> for developing locally on a Mac. Once you create a nation, you’ll want to download it via Theme Sync. Then, you’ll have much greater access to what’s under the hood than the control panel affords you, although you’ll still switch back and forth with the control panel as some stuff can only be done there. It’s also useful to remember the two levels of NationBuilder editing. Theme-level editing is modifying page types across your entire website. To do that from your control panel, go to <strong>Website &gt; Theme</strong>. Page-level editing is modifying a specific page. This will override your theme level template. To do that, go to <strong>Website &gt; Template</strong>.</p>
+<p>NationBuilder uses <a href="http://nationbuilder.com/theme_sync" target="_blank">Theme Sync</a> for developing locally on a Mac. Once you create a nation, you’ll want to download it via Theme Sync. Then, you’ll have much greater access to what’s under the hood than the control panel affords you, although you’ll still switch back and forth with the control panel as some stuff can only be done there. It’s also useful to remember the two levels of NationBuilder editing. Theme-level editing is modifying page types across your entire website. To do that from your control panel, go to <strong>Website &gt; Theme</strong>. Page-level editing is modifying a specific page. This will override your theme level template. To do that, go to <strong>Website &gt; Template</strong>.</p>
 
 <p><img src="../images/themes.png" alt="NationBuilder Themes" /></p>
 
-<p>In addition to SCSS and Javascript, NationBuilder uses the open source Liquid template language to access objects and variables. Liquid is based in <a href="https://www.ruby-lang.org/en/">Ruby</a> and was first developed for <a href="https://www.shopify.com/">Shopify</a>. The two basic types of liquid markup are output and tags. Output variables are used to to display dynamic content. They are surrounded by <code>{{</code> two curly brackets <code>}}</code> and are replaced with the data they reference. Tags are put inside <code>{%</code> a curly bracket and a percent <code>%}</code> and are used to define logic like for loops or branching logic.</p>
+<p>In addition to SCSS and Javascript, NationBuilder uses the open source Liquid template language to access objects and variables. Liquid is based in <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a> and was first developed for <a href="https://www.shopify.com/" target="_blank">Shopify</a>. The two basic types of liquid markup are output and tags. Output variables are used to to display dynamic content. They are surrounded by <code>{{</code> two curly brackets <code>}}</code> and are replaced with the data they reference. Tags are put inside <code>{%</code> a curly bracket and a percent <code>%}</code> and are used to define logic like for loops or branching logic.</p>
 
 <p>Here’s an example of some liquid template logic:</p>
 
@@ -179,11 +181,11 @@
 
 <h1 id="liquid-basics">Liquid Basics</h1>
 
-<p>In my <a href="http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/">previous post</a>, I went over some high-level key concepts as an introduction to the <a href="http://nationbuilder.com/">NationBuilder</a> platform. Now, and over my next few articles, I’ll go a bit deeper on the development side with some examples of how to solve common issues on NationBuilder and share lessons I’ve learned along the way. I’ll also provide a few code snippets designed to give you some insight into how NationBuilder works under the hood.</p>
+<p>In my <a href="http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/" target="_blank">previous post</a>, I went over some high-level key concepts as an introduction to the <a href="http://nationbuilder.com/" target="_blank">NationBuilder</a> platform. Now, and over my next few articles, I’ll go a bit deeper on the development side with some examples of how to solve common issues on NationBuilder and share lessons I’ve learned along the way. I’ll also provide a few code snippets designed to give you some insight into how NationBuilder works under the hood.</p>
 
 <p>So consider this an introductory series, covering the fundamentals of developing on NationBuilder, with—hopefully—a few tips and tricks everyone can use. And as always, let me know what you think!</p>
 
-<p><img src="../images/desktop.jpg" alt="desktop waork station" /></p>
+<p><img src="../images/desktop.jpg" alt="desktop work station" /></p>
 
 <h2 id="getting-a-feel-for-liquid">Getting a Feel for Liquid</h2>
 
@@ -251,9 +253,9 @@
 <p>Liquid works by adding page, user, site, and request variables into a page or a template file. One important distinction to make about the NationBuilder CMS is that actions are taken using different NationBuilder page types, rather than widgets or plugins. So to create a petition, event page, or general signup page, you’d create a new page with that type. Here are some useful documentation links:</p>
 
 <ul>
-  <li><a href="http://nationbuilder.com/liquid_basics">Liquid Basics</a></li>
-  <li><a href="http://nationbuilder.com/liquid">Liquid Object Reference</a></li>
-  <li><a href="http://nationbuilder.com/liquid_template_examples">Liquid Snippets</a></li>
+  <li><a href="http://nationbuilder.com/liquid_basics" target="_blank">Liquid Basics</a></li>
+  <li><a href="http://nationbuilder.com/liquid" target="_blank">Liquid Object Reference</a></li>
+  <li><a href="http://nationbuilder.com/liquid_template_examples" target="_blank">Liquid Snippets</a></li>
 </ul>
 
 <p>You’ll see Liquid is doing most of the work when you set up your nation. In my previous post, I gave a quick rundown of the most important template files. Getting a sense of how they’re all organized and connected will help big time.</p>
@@ -262,7 +264,7 @@
 
 <h2 id="page-variables">Page Variables</h2>
 
-<p>For any page, you’ll be able to call a range of <a href="http://nationbuilder.com/page_variables">page variables</a>.</p>
+<p>For any page, you’ll be able to call a range of <a href="http://nationbuilder.com/page_variables" target="_blank">page variables</a>.</p>
 
 <p>Stick this snippet on any page to list out what each variable is for that particular page:</p>
 
@@ -326,7 +328,7 @@
 
 <p>Then just add or remove tags to a page to control its content.</p>
 
-<p>That’s all for now on Liquid basics. Check back soon for the next installment on for loops and conditionals. And if you have any questions or need some help with your site, just <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#104;&#114;&#105;&#115;&#064;&#114;&#097;&#100;&#105;&#115;&#104;&#108;&#097;&#098;&#046;&#099;&#111;&#109;">reach out</a>, and we’d be glad to help!</p>
+<p>That’s all for now on Liquid basics. Check back soon for the next installment on for loops and conditionals. And if you have any questions or need some help with your site, just <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#099;&#104;&#114;&#105;&#115;&#064;&#114;&#097;&#100;&#105;&#115;&#104;&#108;&#097;&#098;&#046;&#099;&#111;&#109;" target="_blank">reach out</a>, and we’d be glad to help!</p>
 
 				<hr />
 				<footer class="page-footer">

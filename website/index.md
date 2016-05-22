@@ -1,17 +1,16 @@
 ---
 layout: article
 title: Web Development in NationBuilder
+hero: website-hero.png
 date: 2016-03-30
 modified:
 excerpt: Principles and Best Practices for Developing Websites with NationBuilder
 image: 
   feature:
-  teaser: preview-website.png
-  thumb: preview-website.png
+  teaser: website-preview.png
+  thumb: website-preview.png
 ads: false
 ---
-
-![NationBuilder guide](../images/website-hero.png){: class="hero"}
 
 ## Developing a Website on NationBuilder
 
@@ -21,7 +20,7 @@ ads: false
 
 In this installment of our NationBuilder series, we’re going over for the two primary methods for adding logic using Liquid to a NationBuilder theme: **for loops** and **conditionals**.
 
-![code sweater](../images/preview-community.png)
+![code sweater](../images/sweater.png)
 
 ## Conditionals
 

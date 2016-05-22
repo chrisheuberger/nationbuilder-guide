@@ -2,9 +2,8 @@
 layout: archive
 permalink: /
 title: "A Mini Guide to NationBuilder"
+hero: landing-hero.png
 ---
-
-![NationBuilder guide](../images/landing-hero.png){: class="hero"}
 
 #### Tips & Techniques by Radish Lab
 

@@ -96,7 +96,7 @@
       display: block;
       @include font-size(32,no,1);
       @include media($small) {
-        @include font-size(48,no,1);
+        @include font-size(38,no,1);
       }
       font-family: $base-font;
       text-transform: uppercase;

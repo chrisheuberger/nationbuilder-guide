@@ -1,17 +1,16 @@
 ---
 layout: article
 title: Building Community with NationBuilder
+hero: community-hero.png
 date: 2016-03-30
 modified:
 excerpt: Connecting Users and Building Community with NationBuilder
 image: 
   feature:
-  teaser: preview-community.png
-  thumb: preview-community.png
+  teaser: community-preview.png
+  thumb: community-preview.png
 ads: false
 ---
-
-![NationBuilder guide](../images/community-hero.png){: class="hero"}
 
 ## Building a Community on NationBuilder
 

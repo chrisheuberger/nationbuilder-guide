@@ -1,17 +1,16 @@
 ---
 layout: article
 title: The Fundamentals of NationBuilder
+hero: fundamentals-hero.png
 date: 2016-03-30
 modified:
 excerpt: NationBuilder Basics and Development Overview
 image:
   feature:
-  teaser: preview-fundamentals.png
-  thumb: preview-fundamentals.png
+  teaser: fundamentals-preview.png
+  thumb: fundamentals-preview.png
 ads: false
 ---
-
-![NationBuilder guide](../images/fundamentals-hero.png){: class="hero"}
 
 ## The Fundamentals of NationBuilder
 

@@ -2,15 +2,15 @@
 
 - title: Basics
   url: /basics/
-  excerpt: "NationBuilder Basics and Development Overview"
+  excerpt: "An Overview of NationBuilder Basics"
   image: basics-preview.png
 
 - title: Customizing
   url: /customizing/
-  excerpt: "Principles and Best Practices for Developing Websites with NationBuilder"
+  excerpt: "Development Principles and Best Practices"
   image: customizing-preview.png
 
 - title: Community
   url: /community/
-  excerpt: "Connecting Users and Building Community with NationBuilder"
+  excerpt: "Connecting Users and Building Community"
   image: community-preview.png

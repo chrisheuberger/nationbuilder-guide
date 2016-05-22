@@ -46,13 +46,16 @@ a.sliding-title-link {
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 	height: $masthead-height;
 	text-decoration: none;
-	color: $darkblue;
+	color: $darkbluegreen ;
 	font-family: $alt-font;
 	font-weight: 600;
   letter-spacing: .125em;
 	@include font-size(13,no);
 	line-height: .5 * $masthead-height; // half the height to center vertically
 	text-transform: uppercase;
+  &:hover {
+    color: lighten($darkbluegreen, 10);
+  }
 }
 
 /*
@@ -92,7 +95,7 @@ a.sliding-title-link {
 			}
 			&:after {
 				width: 0;
-				background: $darkblue;
+				background: $darkbluegreen;
 			}
 			&:active:after,
 			&:hover:after {
@@ -124,7 +127,7 @@ a.sliding-title-link {
       letter-spacing: .125em;
 			@include font-size(16,no);
 			line-height: .5 * $masthead-height; // half the height to center vertically
-			color: $darkblue;
+			color: $darkbluegreen ;
 			text-transform: uppercase;
 		}
 	}
@@ -138,6 +141,9 @@ a.sliding-title-link {
 	a {
 		color: lighten($darkblue,60);
 	}
+  li a:after {
+    background: lighten($darkblue,60);
+  }
 }
 
 
@@ -183,9 +189,9 @@ a.sliding-title-link {
 			a { text-decoration: none; }
 			p a,
 			li a {
-				border-bottom: 1px dotted lighten($link-color, 50);
+				border-bottom: 1px dotted lighten($link-color, 20);
 				&:hover {
-					border-bottom-style: solid;
+          border-bottom: 1px solid lighten($link-color, 40);
 				}
 			}
 			p > a.reversefootnote {

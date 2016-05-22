@@ -34,27 +34,32 @@ h1 {
     }
   font-weight: 200;
   margin-top: 0;
-  color: $green;
+  color: $darkbluegreen;
 }
 h2 {
 	@include font-size(32);
   letter-spacing: .05em;
+  color: $green;
 }
 h3 {
 	@include font-size(28);
   letter-spacing: .05em;
+  color: $greenblue;
 }
 h4 {
 	@include font-size(24);
   letter-spacing: .05em;
+  color: $greenblue;
 }
 h5 {
 	@include font-size(20);
   letter-spacing: .05em;
+  color: $greenblue;
 }
 h6 {
 	@include font-size(18);
   letter-spacing: .05em;
+  color: $greenblue;
 }
 
 /* Underlined text */
@@ -68,9 +73,9 @@ ins {
 /* Links */
 
 a {
-	color: $link-color;
+	color: lighten($link-color, 20);
 	&:hover {
-		color: darken($link-color, 20);
+		color: lighten($link-color, 30);
 	}
 	&:focus {
 		@extend %tab-focus;

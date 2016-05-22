@@ -1,18 +1,16 @@
 ---
 layout: article
-title: Web Development in NationBuilder
-hero: website-hero.png
+title: Customizing a Website on NationBuilder
+hero: customizing-hero.png
 date: 2016-03-30
 modified:
 excerpt: Principles and Best Practices for Developing Websites with NationBuilder
 image: 
   feature:
-  teaser: website-preview.png
-  thumb: website-preview.png
+  teaser: customizing-preview.png
+  thumb: customizing-preview.png
 ads: false
 ---
-
-## Developing a Website on NationBuilder
 
 {% include toc.html %}
 

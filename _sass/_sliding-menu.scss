@@ -91,6 +91,7 @@
       margin-right: 20%;
     }
     color: $white;
+    letter-spacing: .05em;
     @include font-size(14);
     @include media($small) {
       @include font-size(16);
@@ -103,7 +104,7 @@
       }
       font-family: $base-font;
       text-transform: uppercase;
-      letter-spacing: .2em;
+      letter-spacing: .125em;
       font-weight: 600;
     }
   }
@@ -139,7 +140,7 @@
       width: 50px;
       border: 2px solid $white;
       margin-bottom: ($gutter / 2);
-      opacity: 0.6;
+      opacity: 1;
       @include media($small) {
         width: 150px;
       }
@@ -150,7 +151,7 @@
       }        
     }
     a:hover .teaser {
-      opacity: 1;
+      /*opacity: 1;*/
     }
     .title {
       display: block;
@@ -158,6 +159,7 @@
       font-family: $alt-font;
       @include font-size(24,no);
       font-weight: 600;
+      letter-spacing: .05em;
       @include media($small) {
         margin-left: 170px;
         @include font-size(32,no);
@@ -169,6 +171,7 @@
     .excerpt {
       margin-top: 0;
       margin-left: 60px;
+      letter-spacing: .05em;
       @include font-size(14,no);
       @include media($small) {
         margin-left: 170px;

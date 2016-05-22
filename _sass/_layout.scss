@@ -9,8 +9,13 @@
 div.hero-container {
   text-align: center;
   background-color: $superlightblue;
-  width:300%;
-  margin-left:-100%;
+  width: calc(100% + $gutter);
+  margin-left: -1 * $gutter;
+  margin-right: -1 * $gutter;
+  @include media($medium) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 a.sliding-title-link {
@@ -44,8 +49,8 @@ a.sliding-title-link {
 	color: $darkblue;
 	font-family: $alt-font;
 	font-weight: 600;
-  letter-spacing: .15em;
-	@include font-size(16,no);
+  letter-spacing: .125em;
+	@include font-size(13,no);
 	line-height: .5 * $masthead-height; // half the height to center vertically
 	text-transform: uppercase;
 }
@@ -70,6 +75,7 @@ a.sliding-title-link {
 			padding: (.25 * $masthead-height) 0 (.25 * $masthead-height) ;
 			height: $masthead-height;
 			font-family: $alt-font;
+      letter-spacing: .05em;
 			&:before,
 			&:after {
 				content: '';
@@ -115,6 +121,7 @@ a.sliding-title-link {
 	li {
 		a {
 			font-weight: 600;
+      letter-spacing: .125em;
 			@include font-size(16,no);
 			line-height: .5 * $masthead-height; // half the height to center vertically
 			color: $darkblue;

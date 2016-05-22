@@ -12,8 +12,6 @@ image:
 ads: false
 ---
 
-## Building a Community on NationBuilder
-
 {% include toc.html %}
 
 # People

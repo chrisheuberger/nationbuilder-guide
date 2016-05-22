@@ -1,14 +1,14 @@
 # Site navigation links
 
-- title: Fundamentals
-  url: /fundamentals/
+- title: Basics
+  url: /basics/
   excerpt: "NationBuilder Basics and Development Overview"
-  image: fundamentals-preview.png
+  image: basics-preview.png
 
-- title: Website
-  url: /website/
+- title: Customizing
+  url: /customizing/
   excerpt: "Principles and Best Practices for Developing Websites with NationBuilder"
-  image: website-preview.png
+  image: customizing-preview.png
 
 - title: Community
   url: /community/

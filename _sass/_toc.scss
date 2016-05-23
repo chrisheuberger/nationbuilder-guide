@@ -17,7 +17,7 @@
   ul {
     margin-top: $gutter;
     margin-bottom: $gutter;
-    border: 1px solid $border-color;
+    border: 1px solid $slategray;
     @include media($medium) {
       border-radius: $border-radius;
     }
@@ -27,15 +27,15 @@
     @include media($small) {
       @include font-size(16,no,18);
     }
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $slategray;
     > a {
       display: block;
       padding: 7px 1.618rem;
-      color: $text-color;
+      color: $darkbluegreen;
       border-left: 2px solid transparent;
       &:hover,
       &:focus {
-        background: mix($white, $border-color, 5%);
+        background: lighten($slategray, 15);
       }
     }
   }
@@ -43,11 +43,12 @@
     margin: 0;
     padding: 7px 1.618rem;
     background: $table-stripe-color;
+    color: $darkbluegreen;
     &:hover {
-      background: mix($white, $border-color, 5%);
+      background: lighten($slategray, 5);
     }
     a {
-      color: $text-color;
+      color: $darkbluegreen;
     }
   }
 }

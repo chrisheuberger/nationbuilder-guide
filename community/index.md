@@ -1,17 +1,16 @@
 ---
 layout: article
 title: Building Community with NationBuilder
+hero: community-hero.png
 date: 2016-03-30
 modified:
 excerpt: Connecting Users and Building Community with NationBuilder
 image: 
   feature:
-  teaser: preview-community.png
-  thumb: preview-community.png
+  teaser: community-preview.png
+  thumb: community-preview.png
 ads: false
 ---
-
-## Building a Community on NationBuilder
 
 {% include toc.html %}
 
@@ -66,9 +65,9 @@ If you want to add, edit, merge, or generally clean up these people tags, go to 
 
 Once there, any existing tag within your system can also be added to a person manually by going to **People** and then clicking the add tag button right from a person's profile preview.
 
-To add a tag to a list of people, you would do a [batch update](http://nationbuilder.com/how_to_batch).
+To add a tag to a list of people, you would do a [batch update](http://nationbuilder.com/how_to_batch){:target="_blank"}.
 
-You can also [filter people by tag](http://nationbuilder.com/how_to_filter) in order to target any tag combination. That's how you can build a recipient list for an email blast that targets, for example, anyone who has ever signed a petition or anyone who has signed _both_ petition A and petition B, etc. Once you build a filter this way, you can save it and then use it to send out an [email blast](http://nationbuilder.com/how_to_create_an_email_blast).
+You can also [filter people by tag](http://nationbuilder.com/how_to_filter){:target="_blank"} in order to target any tag combination. That's how you can build a recipient list for an email blast that targets, for example, anyone who has ever signed a petition or anyone who has signed _both_ petition A and petition B, etc. Once you build a filter this way, you can save it and then use it to send out an [email blast](http://nationbuilder.com/how_to_create_an_email_blast){:target="_blank"}.
 
 ![people](../images/people.png)
 
@@ -85,14 +84,14 @@ NationBuilder restricts users from being able to send out email blasts to prospe
 1.  Opting into email support and becoming a "supporter" of the nation
 2.  Assigning a tag to themselves that is used to send mailings via. For example, there exist tags like **Weekly Newsletter tag**, **Monthly Newsletter tag**, etc. and when an email blast is sent, the recipient list is set to **users tagged with Weekly Newsletter**.
 
-More on formatting and controlling email blasts [here](http://nationbuilder.com/how_to_create_an_email_blast).
+More on formatting and controlling email blasts [here](http://nationbuilder.com/how_to_create_an_email_blast){:target="_blank"}.
 
-You can also assign a tag to be used as a subscription option, so that "unsubscribing" actually becomes removing the tag from that profile. Full details [here](http://nationbuilder.com/how_to_use_the_unsubscribe_page).
+You can also assign a tag to be used as a subscription option, so that "unsubscribing" actually becomes removing the tag from that profile. Full details [here](http://nationbuilder.com/how_to_use_the_unsubscribe_page){:target="_blank"}.
 
 And lastly, say _you_ want to be notified whenever someone takes an action on a page. First, make sure whatever email address you want to use is set up as an admin user. To do this, log in with that email address and go to **Settings > Your account > Email notifications** and check the box next to whichever action you wish to trigger an email. The column refers to who would trigger that email. Instructions are [here](http://nationbuilder.com/notification_emails#adjust).
 
 ![email notifications](../images/email-notifications.png)
 
-And that’s a basic introduction to communicating with your users on NationBuilder. The next level of engagement would be [paths](http://nationbuilder.com/create_paths) which is NationBuilder’s way of allowing you to keep users on track toward a specific goal.
+And that’s a basic introduction to communicating with your users on NationBuilder. The next level of engagement would be [paths](http://nationbuilder.com/create_paths){:target="_blank"} which is NationBuilder’s way of allowing you to keep users on track toward a specific goal.
 
 Check back for my last installment in this series on memberships, signups, and actions. Until then!

@@ -1,10 +1,10 @@
 # Footer navigation links
 
-- title: Fundamentals
-  url: /fundamentals/
+- title: Basics
+  url: /basics/
 
-- title: Website
-  url: /website/
+- title: Customizing
+  url: /customizing/
 
 - title: Community
   url: /community/

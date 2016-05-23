@@ -3,6 +3,43 @@
    ========================================================================== */
 
 /*
+   Custom
+   ========================================================================== */
+
+div.hero-container {
+  text-align: center;
+  background-color: $superlightblue;
+  width: calc(100% + $gutter);
+  margin-left: -1 * $gutter;
+  margin-right: -1 * $gutter;
+  @include media($medium) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+h1.landing-head {
+  margin-bottom: .15em;
+}
+
+h4.landing-subhead {
+  margin-top: 0;
+}
+
+a.sliding-title-link {
+  color: $superlightblue;
+}
+
+.scrollup {
+  @include media($small) {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+  }
+}
+
+/*
    Masthead
    ========================================================================== */
 
@@ -20,21 +57,23 @@
 }
 .site-title {
 	@include row;
-	@include media($large) {
-		@include span-columns(4);
+	@include media($medium) {
+		@include span-columns(6);
 	}
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 	height: $masthead-height;
 	text-decoration: none;
-	color: $darkblue;
+	color: $darkbluegreen ;
 	font-family: $alt-font;
 	font-weight: 600;
-  letter-spacing: .15em;
-	@include font-size(16,no);
+  letter-spacing: .125em;
+	@include font-size(13,no);
 	line-height: .5 * $masthead-height; // half the height to center vertically
 	text-transform: uppercase;
+  &:hover {
+    color: lighten($darkbluegreen, 10);
+  }
 }
-
 
 /*
    Menus
@@ -56,6 +95,7 @@
 			padding: (.25 * $masthead-height) 0 (.25 * $masthead-height) ;
 			height: $masthead-height;
 			font-family: $alt-font;
+      letter-spacing: .05em;
 			&:before,
 			&:after {
 				content: '';
@@ -72,7 +112,7 @@
 			}
 			&:after {
 				width: 0;
-				background: $darkblue;
+				background: $darkbluegreen;
 			}
 			&:active:after,
 			&:hover:after {
@@ -88,10 +128,7 @@
 	display: none;
 	position: relative;
 	@include media($medium) {
-		@include span-columns(12);
-	}
-	@include media($large) {
-		@include span-columns(7);
+		@include span-columns(6);
 		ul {
 			position: absolute;
 			right: 0;
@@ -104,9 +141,10 @@
 	li {
 		a {
 			font-weight: 600;
+      letter-spacing: .125em;
 			@include font-size(16,no);
 			line-height: .5 * $masthead-height; // half the height to center vertically
-			color: $darkblue;
+			color: $darkbluegreen ;
 			text-transform: uppercase;
 		}
 	}
@@ -120,6 +158,9 @@
 	a {
 		color: lighten($darkblue,60);
 	}
+  li a:after {
+    background: lighten($darkblue,60);
+  }
 }
 
 
@@ -165,9 +206,9 @@
 			a { text-decoration: none; }
 			p a,
 			li a {
-				border-bottom: 1px dotted lighten($link-color, 50);
+				border-bottom: 1px dotted lighten($link-color, 20);
 				&:hover {
-					border-bottom-style: solid;
+          border-bottom: 1px solid lighten($link-color, 40);
 				}
 			}
 			p > a.reversefootnote {

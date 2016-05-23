@@ -90,11 +90,13 @@
     @include media($large) {
       margin-right: 20%;
     }
-    color: $white;
     letter-spacing: .05em;
     @include font-size(14);
     @include media($small) {
       @include font-size(16);
+    }
+    a {
+      color: $green;
     }
     span {
       display: block;
@@ -130,7 +132,7 @@
   .menu-item {
     a {
       display: block;
-      color: $white;
+      color: $blue;
       text-decoration: none;
     }
     .teaser {
@@ -157,6 +159,7 @@
       display: block;
       margin-left: 60px;
       font-family: $alt-font;
+      color: $lightblue;
       @include font-size(24,no);
       font-weight: 600;
       letter-spacing: .05em;

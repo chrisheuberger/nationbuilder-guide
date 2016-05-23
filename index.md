@@ -5,8 +5,6 @@ title: "A Mini Guide to NationBuilder"
 hero: landing-hero.png
 ---
 
-#### Tips & Techniques by Radish Lab
-
 ## Welcome to Radish Lab's mini guide to NationBuilder!
 
 This site is a general introduction to the NationBuilder platform chock full of useful tips and tricks to get you started. It's geared towards developers (but, helpful for anyone with a bit of coding knowledge) looking to learn must-know concepts, strategies and approaches to the platform. 

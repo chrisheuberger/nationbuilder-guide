@@ -1,5 +1,6 @@
 // Off Canvas Sliding
 $(document).ready(function(){
+  console.log("bigtest");
   // Menu button click
   $('#js-menu-trigger,#js-menu-screen').on('click touchstart', function(e){
     // $('#js-body').toggleClass('no-scroll');
@@ -8,6 +9,7 @@ $(document).ready(function(){
     // $('#masthead, #page-wrapper').toggleClass('slide');
     e.preventDefault();
   });
+
 });
 
 // FitVids

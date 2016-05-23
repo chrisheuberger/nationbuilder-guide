@@ -18,8 +18,25 @@ div.hero-container {
   }
 }
 
+h1.landing-head {
+  margin-bottom: .15em;
+}
+
+h4.landing-subhead {
+  margin-top: 0;
+}
+
 a.sliding-title-link {
   color: $superlightblue;
+}
+
+.scrollup {
+  @include media($small) {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+  }
 }
 
 /*

@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	@include font-size(60);
   @include media($micro) {
-      @include font-size(40);
-    }
+    @include font-size(40);
+  }
   font-weight: 200;
   margin-top: 0;
   color: $darkbluegreen;
@@ -47,9 +47,19 @@ h3 {
   color: $greenblue;
 }
 h4 {
-	@include font-size(24);
+	@include font-size(22);
   letter-spacing: .05em;
-  color: $greenblue;
+  color: $lightblue;
+  a {
+    color: darken($lightblue,20);
+    text-decoration: none;
+    &:hover {
+      color: darken($lightblue,40);
+    }
+  }
+  @include media($micro) {
+    @include font-size(18);
+  }
 }
 h5 {
 	@include font-size(20);

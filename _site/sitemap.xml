@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/nationbuilder-guide/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>/nationbuilder-guide/community/</loc>
+<loc>/community/</loc>
 </url>
 <url>
-<loc>/nationbuilder-guide/basics/</loc>
+<loc>/basics/</loc>
 </url>
 <url>
-<loc>/nationbuilder-guide/customizing/</loc>
+<loc>/customizing/</loc>
 </url>
 </urlset>

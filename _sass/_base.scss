@@ -49,12 +49,12 @@ h3 {
 h4 {
 	@include font-size(22);
   letter-spacing: .05em;
-  color: $lightblue;
+  color: $blue;
   a {
-    color: darken($lightblue,20);
+    color: darken($blue,20);
     text-decoration: none;
     &:hover {
-      color: darken($lightblue,40);
+      color: darken($blue,40);
     }
   }
   @include media($micro) {
@@ -64,12 +64,12 @@ h4 {
 h5 {
 	@include font-size(20);
   letter-spacing: .05em;
-  color: $greenblue;
+  color: $lightblue;
 }
 h6 {
 	@include font-size(18);
   letter-spacing: .05em;
-  color: $greenblue;
+  color: $yelloworange;
 }
 
 /* Underlined text */
@@ -129,7 +129,7 @@ li code {
 	margin: 0 2px;
 	padding: 0 5px;
 	border: 1px solid $border-color;
-	background-color: lighten($primary-color, 95);
+	background-color: $superlightgray;
 	border-radius: $border-radius;
 }
 

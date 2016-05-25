@@ -1,6 +1,7 @@
 ---
 layout: {{ layout }}
 title: {{ title }}
+hero:
 date: {{ date }}
 modified:
 excerpt:

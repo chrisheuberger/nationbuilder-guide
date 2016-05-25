@@ -21,34 +21,49 @@ $border-radius               	: 3px;
    Color variables
    ========================================================================== */
 
+$superlightgray               : #ebebeb;
 $white                        : #fff;
+$darkgray                     : #363C44;
+$slategray                     : #A7CDCC;
 $black                        : #000;
+
+$darkblue                     : #34314c;
 $blue                         : #65B6CF;
 $lightblue                    : #C6E4F5;
+$superlightblue               : #E1EEF6;
+
+$bluegreen                    : #11999E;
+$darkbluegreen                : #004A55;
+
 $green                        : #9AE1B2;
-$darkblue                     : #34314c;
 
+$greenblue                    : #41D3BD;
 
-$body-color                  	: #ebebeb;
+$orange                       : #F68657;
+$redorange                    : #F25F5C;
+$lightyelloworange            : #FFDA8E;
+$yelloworange                 : #FAD662;
 
-$text-color                  	: #313130;
+$body-color                  	: $superlightgray;
+
+$text-color                  	: $darkgray;
 $caption-color                : mix($white, $text-color, 25%);
 
-$base-color                  	: #343434;
+$base-color                  	: $darkgray;
 $comp-color                  	: complement($base-color);
-$border-color                	: #ddd;
-$link-color                  	: #222;
+$border-color                	: $superlightblue;
+$link-color                  	: $darkbluegreen;
 
 $primary-color               	: $darkblue;
-$success-color               	: #2ecc71;
-$warning-color               	: #f1c40f;
-$danger-color                	: #e74c3c;
-$info-color                  	: #3498db;
+$success-color               	: $greenblue;
+$warning-color               	: $orange;
+$danger-color                	: $redorange;
+$info-color                  	: $bluegreen;
 
-$table-border-color          	: $border-color;
+$table-border-color          	: $slategray;
 $table-border                	: 1px solid $table-border-color;
-$table-background            	: $body-color;
-$table-header-color          	: lighten($table-background, 10);
+$table-background            	: $slategray;
+$table-header-color          	: lighten($table-background, 80);
 $table-hover-color           	: darken($table-background, 2);
 $table-stripe-color          	: darken($table-background, 4);
 $table-stripe-color-hover    	: darken($table-stripe-color, 5);
@@ -85,10 +100,10 @@ $form-font-size              	: $doc-font-size;
    Sliding menu navigation variables
    ========================================================================== */
 
-$sliding-menu-border-color	 	 : $black;
+$sliding-menu-border-color	 	 : $darkblue;
 $sliding-menu-background 		   : $darkblue;
 $sliding-menu-color 	 		     : $white;
-$sliding-menu-background-hover : $black;
+$sliding-menu-background-hover : $darkblue;
 $sliding-menu-color-hover	 	   : $white;
 $sliding-menu-border   			   : 1px solid $sliding-menu-border-color;
 $button-size		         	     : 30px;
@@ -100,7 +115,7 @@ $sliding-menu-animation        : all 500ms cubic-bezier(.86,.01,.77,.78);
    ========================================================================== */
 
 $badge-background              : $primary-color;
-$badge-dark-color              : $black;
+$badge-dark-color              : $darkblue;
 $badge-danger-color            : $danger-color;
 $badge-info-color              : $info-color;
 $badge-warning-color           : $warning-color;

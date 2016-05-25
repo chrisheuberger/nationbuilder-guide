@@ -1,6 +1,7 @@
 ---
 layout: media
 title: {{ title }}
+hero:
 modified:
 categories: {{ dir }}
 excerpt:

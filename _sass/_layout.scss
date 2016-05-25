@@ -12,6 +12,7 @@ div.hero-container {
   width: calc(100% + $gutter);
   margin-left: -1 * $gutter;
   margin-right: -1 * $gutter;
+  border-radius: 5px;
   @include media($medium) {
     margin-left: 0;
     margin-right: 0;
@@ -388,6 +389,9 @@ a.sliding-title-link {
 		a {
 			color: lighten($darkblue,60);
 			text-decoration: none;
+      &:hover {
+        color: lighten($darkblue,20);
+      }
 		}
 	}
 }

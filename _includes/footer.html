@@ -1,15 +1,35 @@
-<footer role="contentinfo" id="site-footer">
-	<nav role="navigation" class="menu bottom-menu">
-		<ul class="menu-item">
-		{% for link in site.data.footer %}
-      {% if link.url contains 'http' %}
-        {% assign domain = '' %}
-        {% else %}
-        {% assign domain = site.url %}
-      {% endif %}
-			<li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
-		{% endfor %}
-		</ul>
-	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; {{ site.time | date: '%Y' }} <a href="/">{{ site.title }}</a> by <a href="http://radishlab.com" target="_blank">Radish Lab</a>.</p>
-</footer>
+{% if page.title != "A Mini Guide to NationBuilder" %}
+  <footer role="contentinfo" id="site-footer">
+    <nav role="navigation" class="menu bottom-menu">
+      <ul class="menu-item">
+      {% for link in site.data.footer %}
+        {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+          {% else %}
+          {% assign domain = site.url %}
+        {% endif %}
+        <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav><!-- /.bottom-menu -->
+    <p class="copyright">&#169; {{ site.time | date: '%Y' }} <a href="/">{{ site.title }}</a> by <a href="http://radishlab.com" target="_blank">Radish Lab</a>.</p>
+  </footer>
+{% endif %}
+
+{% if page.title == "A Mini Guide to NationBuilder" %}
+  <footer role="contentinfo" id="home-footer">
+    <nav role="navigation" class="menu bottom-menu">
+      <ul class="menu-item">
+      {% for link in site.data.footer %}
+        {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+          {% else %}
+          {% assign domain = site.url %}
+        {% endif %}
+        <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav><!-- /.bottom-menu -->
+    <p class="copyright">&#169; {{ site.time | date: '%Y' }} <a href="/">{{ site.title }}</a> by <a href="http://radishlab.com" target="_blank">Radish Lab</a>.</p>
+  </footer>
+{% endif %}

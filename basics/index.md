@@ -14,7 +14,7 @@ ads: false
 
 {% include toc.html %}
 
-# Hello NationBuilder
+## Hello NationBuilder
 
 [NationBuilder](http://nationbuilder.com/website){:target="_blank"} is a powerful tool for organizing people online. But just what does that mean?
 
@@ -32,7 +32,7 @@ When getting acquainted with NationBuilder, the control panel is a good place to
 
 The control panel is where most general organization of a website happens. For example, when you create a page here, be sure to choose its page type wisely. There are many options, and whichever one you choose will determine what that page will be set up to accomplish within your site. For example, a signup page type comes ready to collect user submissions, with the preloaded capability to customize a form however you need it.
 
-![NationBuilder Page Types](../images/page-types.jpg)
+![page tags](../images/join-screenshot.png){: .full-width}
 
 I'm going to get a bit technical here, so proceed with caution.
 
@@ -40,7 +40,7 @@ NationBuilder is built with [Ruby on Rails](http://rubyonrails.org/){:target="_b
 
 NationBuilder uses [Theme Sync](http://nationbuilder.com/theme_sync){:target="_blank"} for developing locally on a Mac. Once you create a nation, you’ll want to download it via Theme Sync. Then, you’ll have much greater access to what’s under the hood than the control panel affords you, although you’ll still switch back and forth with the control panel as some stuff can only be done there. It’s also useful to remember the two levels of NationBuilder editing. Theme-level editing is modifying page types across your entire website. To do that from your control panel, go to **Website > Theme**. Page-level editing is modifying a specific page. This will override your theme level template. To do that, go to **Website > Template**.
 
-![NationBuilder Themes](../images/themes.png)
+![NationBuilder Themes](../images/themes-screenshot.png){: .full-width}
 
 In addition to SCSS and Javascript, NationBuilder uses the open source Liquid template language to access objects and variables. Liquid is based in [Ruby](https://www.ruby-lang.org/en/){:target="_blank"} and was first developed for [Shopify](https://www.shopify.com/){:target="_blank"}. The two basic types of liquid markup are output and tags. Output variables are used to to display dynamic content. They are surrounded by <code>{% raw %}{{{% endraw %}</code> two curly brackets <code>{% raw %}}}{% endraw %}</code> and are replaced with the data they reference. Tags are put inside <code>{% raw %}{%{% endraw %}</code> a curly bracket and a percent <code>{% raw %}%}{% endraw %}</code> and are used to define logic like for loops or branching logic.
 
@@ -65,13 +65,11 @@ And the most important stylesheets are:
 
 Familiarize yourself with those files and check out what else lives in a nation’s theme and site folders and you’ll have a good understanding of everything that goes into a NationBuilder website. In my next post, I’ll be providing some specific tips and tricks for developing themes on NationBuilder so stay tuned to learn how to customize that website!
 
-# Liquid Basics
+## Liquid Basics
 
 In my [previous post](http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/){:target="_blank"}, I went over some high-level key concepts as an introduction to the [NationBuilder](http://nationbuilder.com/){:target="_blank"} platform. Now, and over my next few articles, I’ll go a bit deeper on the development side with some examples of how to solve common issues on NationBuilder and share lessons I’ve learned along the way. I’ll also provide a few code snippets designed to give you some insight into how NationBuilder works under the hood.
 
 So consider this an introductory series, covering the fundamentals of developing on NationBuilder, with—hopefully—a few tips and tricks everyone can use. And as always, let me know what you think!
-
-![desktop work station](../images/desktop.jpg)
 
 ## Getting a Feel for Liquid
 
@@ -178,11 +176,11 @@ Stick this snippet on any page to list out what each variable is for that partic
 
 ## Tagging Pages and People
 
+![NationBuilder Themes](../images/themes-screenshot.png){: .full-width}
+
 When you set up a new page on NationBuilder, you can add a tag to people under the settings tab of that new page. In the control panel for a page or person, there is a button to tag that page. A tag can also be added automatically when a person takes an action on your website or contacts a broadcaster.
 
-![page tags](../images/page-tags.png)
-
-![people tags](../images/people-tags.png)
+![people tags](../images/people-tags.png){: .full-width}
 
 The <code>{% raw %}{% tag %}{% endraw %}</code> logic tag is used to associate pages with a specific page tag with an HTML snippet for display.
 
@@ -199,6 +197,8 @@ Then, this line in **_partial_meta_image_snippet.html**:
 {% highlight html %}{% raw %}<img src="{{ page.meta_image_url }}">{% endraw %}{% endhighlight %}
 
 would render that page’s meta image via the code in the HTML snippet.
+
+![page tags](../images/page-tags.png){: .full-width}
 
 ## Using Page Tags for Theme-Level Customizing
 

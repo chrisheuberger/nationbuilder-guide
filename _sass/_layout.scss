@@ -13,6 +13,9 @@ div.hero-container {
   margin-left: -1 * $gutter;
   margin-right: -1 * $gutter;
   border-radius: 5px;
+  @include media($micro) {
+    border-radius: 0;
+  }
   @include media($medium) {
     margin-left: 0;
     margin-right: 0;
@@ -29,6 +32,37 @@ h4.landing-subhead {
 
 a.sliding-title-link {
   color: $superlightblue;
+}
+
+.left-align {
+  float: left;
+  width: 50%;
+  margin: 2em 2em 2em 0;
+  @include media($micro) {
+    width: 100%;
+  }
+}
+
+.right-align {
+  float: right;
+  width: 50%;
+  margin: 2em 0 2em 2em;
+  @include media($micro) {
+    width: 100%;
+  }
+}
+
+.full-width {
+  width: 100%;
+  margin: 2em auto;
+}
+
+.center-container {
+  width: 50%;
+  margin: 2em auto;
+  @include media($micro) {
+    width: 100%;
+  }
 }
 
 .scrollup {
@@ -235,6 +269,9 @@ a.sliding-title-link {
 		.archive-wrap {
 			@include fill-parent;
 			.page-content {
+        @include media($medium) {
+          @include span-columns(10);
+        }
 				@include reset-all;
 				@include fill-parent;
 			}
@@ -394,4 +431,24 @@ a.sliding-title-link {
       }
 		}
 	}
+}
+
+#home-footer {
+  @include outer-container;
+  margin-top: (.5 * (0px + $doc-line-height));
+  margin-top: (.5 * (0rem + ($doc-line-height / $doc-font-size)));
+  padding-bottom: $gutter;
+  font-family: $alt-font;
+  /* Copyright text */
+  .copyright {
+    @include font-size(12);
+    color: lighten($darkblue,60);
+    a {
+      color: lighten($darkblue,60);
+      text-decoration: none;
+      &:hover {
+        color: lighten($darkblue,20);
+      }
+    }
+  }
 }

@@ -14,11 +14,11 @@ ads: false
 
 {% include toc.html %}
 
-# For Loops and Conditionals
+## For Loops and Conditionals
+
+![Liquid](../images/liquid-icon-curly-brackets.png){: .full-width}
 
 In this installment of our NationBuilder series, we’re going over for the two primary methods for adding logic using Liquid to a NationBuilder theme: **for loops** and **conditionals**.
-
-![code sweater](../images/sweater.png)
 
 ## Conditionals
 
@@ -62,9 +62,9 @@ For example, to make certain pages (or parts of pages) only viewable to certain 
 {% endif %}
 {% endraw %}{% endhighlight %}
 
-![for loops](../images/forloop.png)
-
 ## For Loops
+
+![for loops](../images/forloop.png){: .full-width}
 
 For loops are great for quickly targeting a group of pages or posts.
 
@@ -132,6 +132,8 @@ And that would display the first image from each of the 3 most recently publishe
 
 ## Let’s Bring Them Together
 
+![code sweater](../images/sweater.png){: .full-width}
+
 We’ll end with a simple example of an if statement inside a for loop:
 
 {% highlight html %}{% raw %}
@@ -146,13 +148,13 @@ This code would iterate over every subpage for a particular page and for any who
 
 When it comes to Liquid logic, keep it simple and in separated in clean chunks. If it helps, draw or write out your process in pseudo code. Think explicitly about what you want to end with and what you’re able to target to begin with. Pretty soon, you’ll find for loops and conditionals useful thinking tools for any problem.
 
-# Images, Assets, and Subpages
+## Images, Assets, and Subpages
 
 In this, my fourth post on developing with NationBuilder, I’m going to cover some useful concepts and techniques for working with images and subpages. If you want to check out previous posts, there’s one on [getting started](http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/){:target="_blank"}, [Liquid basics](http://radishlab.com/2015/12/introduction-nationbuilder-liquid-basics/){:target="_blank"}, and [Liquid logic](http://radishlab.com/2015/12/an-introduction-to-nationbuilder-for-loops-and-conditionals/){:target="_blank"}.
 
-![images and assets](../images/assets.png)
-
 ## Images, Assets, and Scripts
+
+![images and assets](../images/assets.png){: .full-width}
 
 All images or assets used for a specific page only should be uploaded to **Website > Template > Files** but any images or assets used for your overall theme should be uploaded to **Website > Theme > Files**. No path is necessary when referencing images or assets in your theme template:
 
@@ -190,9 +192,9 @@ An attachment is a file that is uploaded to the files section of a page. The met
 
 [These snippets](http://nationbuilder.com/liquid_template_examples#imagefeed){:target="_blank"} can be used to display images from a page when you don’t know the filename but know that the files will be attachments on that page, which is why they’re housed in for loops.
 
-![nb-subpages](../images/subpages.png)
-
 ## Subpages
+
+![nb-subpages](../images/subpages.png){: .full-width}
 
 When dealing with subpages, you can loop through them to display each one or elements from each one on the main parent page. You’d be accessing the <code>{% raw %}page.children{% endraw %}</code> object by means of a for loop. So you’d place this in the parent page’s template:
 
@@ -242,25 +244,23 @@ You can only use the line in that partial in conjunction with the **subpage** ca
 
 So that’s an overview on where to store images and assets on NationBuilder and how to call them up no matter what page you’re on. Check back for my next post on the People and Communication sections of the NationBuilder control panel and how they connect to your nation’s website.
 
-# Signups, Forms, and Actions
-
-![signup form](../images/signup.png)
+## Signups, Forms, and Actions
 
 Welcome to my sixth and final post on developing websites in NationBuilder. We've covered [getting started](http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/){:target="_blank"}, [using Liquid](http://radishlab.com/2015/12/introduction-nationbuilder-liquid-basics/){:target="_blank"}, [applying logic and tags](http://radishlab.com/2015/12/an-introduction-to-nationbuilder-for-loops-and-conditionals/), [organizing assets and pages](http://radishlab.com/2016/01/an-introduction-to-nationbuilder-images-assets-and-subpages/), and [communicating with your users](http://radishlab.com/2016/01/introduction-nationbuilder-people-communication/){:target="_blank"}. But today, we're going to wrap it up with some tips and tricks around signing up members and enabling actions. That is, how do you allow your users to engage with _you_?
 
 We’ll start in the NationBuilder Control Panel, where you can customize action settings for any action page type.
 
-![nb-6-members](../images/members.png)
-
 ## Action Settings
+
+![nb-6-members](../images/members.png)!{: .full-width}
 
 Many NationBuilder page types allow for visitors to take an action like sign a petition, make a donation, or RSVP to an event. And for each action, there are settings you can control by going to **[Page name] > Settings > [Action] Settings**. So for a page with page type **Signup**, that tab would be labeled **Signup settings**. This is where you can do things like automatically add tags to any person who signs up on your site.
 
 To add or remove a tag associated with a signup form, go to: **Signup settings > Radio buttons**. You can allow users to select multiple tags here: **Signup settings > Basics** in which case the **Radio buttons** section will be renamed **Checkboxes**. For more info, check out how to [create a new tag for a signup form](http://nationbuilder.com/how_to_signup#create){:target="_blank"}.
 
-![unlock](../images/unlock.png)
-
 ## Data and Forms
+
+![unlock](../images/unlock.png)!{: .full-width}
 
 Very often, you want a field in your form that NationBuilder doesn’t have as a default. To include such a field, you’ll need to do a bit of customizing.
 

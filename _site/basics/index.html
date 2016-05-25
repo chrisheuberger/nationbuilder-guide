@@ -71,7 +71,7 @@
 </header><!-- /.masthead -->
 
     <nav role="navigation" id="js-menu" class="sliding-menu-content">
-  <h5><a href="" class="sliding-title-link">A Mini Guide to NationBuilder</a></h5>
+  <h5><a href="/" class="sliding-title-link">A Mini Guide to NationBuilder</a></h5>
   <ul class="menu-item">
     <li>
       <a href="/basics/">
@@ -118,12 +118,18 @@
 				<nav class="toc">
 <ul id="markdown-toc">
   <li><a href="#hello-nationbuilder" id="markdown-toc-hello-nationbuilder">Hello NationBuilder</a></li>
+  <li><a href="#nationbuilder-website-basics" id="markdown-toc-nationbuilder-website-basics">NationBuilder Website Basics</a></li>
   <li><a href="#liquid-basics" id="markdown-toc-liquid-basics">Liquid Basics</a></li>
+  <li><a href="#getting-a-feel-for-liquid" id="markdown-toc-getting-a-feel-for-liquid">Getting a Feel for Liquid</a></li>
+  <li><a href="#how-liquid-is-used-in-nationbuilder" id="markdown-toc-how-liquid-is-used-in-nationbuilder">How Liquid is Used in NationBuilder</a></li>
+  <li><a href="#page-variables" id="markdown-toc-page-variables">Page Variables</a></li>
+  <li><a href="#tagging-pages-and-people" id="markdown-toc-tagging-pages-and-people">Tagging Pages and People</a></li>
+  <li><a href="#using-page-tags-for-theme-level-customizing" id="markdown-toc-using-page-tags-for-theme-level-customizing">Using Page Tags for Theme-Level Customizing</a></li>
 </ul>
 
 </nav>
 
-<h1 id="hello-nationbuilder">Hello NationBuilder</h1>
+<h2 id="hello-nationbuilder">Hello NationBuilder</h2>
 
 <p><a href="http://nationbuilder.com/website" target="_blank">NationBuilder</a> is a powerful tool for organizing people online. But just what does that mean?</p>
 
@@ -141,7 +147,7 @@
 
 <p>The control panel is where most general organization of a website happens. For example, when you create a page here, be sure to choose its page type wisely. There are many options, and whichever one you choose will determine what that page will be set up to accomplish within your site. For example, a signup page type comes ready to collect user submissions, with the preloaded capability to customize a form however you need it.</p>
 
-<p><img src="../images/page-types.jpg" alt="NationBuilder Page Types" /></p>
+<p><img src="../images/join-screenshot.png" alt="page tags" class="full-width" /></p>
 
 <p>I’m going to get a bit technical here, so proceed with caution.</p>
 
@@ -149,7 +155,7 @@
 
 <p>NationBuilder uses <a href="http://nationbuilder.com/theme_sync" target="_blank">Theme Sync</a> for developing locally on a Mac. Once you create a nation, you’ll want to download it via Theme Sync. Then, you’ll have much greater access to what’s under the hood than the control panel affords you, although you’ll still switch back and forth with the control panel as some stuff can only be done there. It’s also useful to remember the two levels of NationBuilder editing. Theme-level editing is modifying page types across your entire website. To do that from your control panel, go to <strong>Website &gt; Theme</strong>. Page-level editing is modifying a specific page. This will override your theme level template. To do that, go to <strong>Website &gt; Template</strong>.</p>
 
-<p><img src="../images/themes.png" alt="NationBuilder Themes" /></p>
+<p><img src="../images/themes-screenshot.png" alt="NationBuilder Themes" class="full-width" /></p>
 
 <p>In addition to SCSS and Javascript, NationBuilder uses the open source Liquid template language to access objects and variables. Liquid is based in <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a> and was first developed for <a href="https://www.shopify.com/" target="_blank">Shopify</a>. The two basic types of liquid markup are output and tags. Output variables are used to to display dynamic content. They are surrounded by <code>{{</code> two curly brackets <code>}}</code> and are replaced with the data they reference. Tags are put inside <code>{%</code> a curly bracket and a percent <code>%}</code> and are used to define logic like for loops or branching logic.</p>
 
@@ -178,13 +184,11 @@
 
 <p>Familiarize yourself with those files and check out what else lives in a nation’s theme and site folders and you’ll have a good understanding of everything that goes into a NationBuilder website. In my next post, I’ll be providing some specific tips and tricks for developing themes on NationBuilder so stay tuned to learn how to customize that website!</p>
 
-<h1 id="liquid-basics">Liquid Basics</h1>
+<h2 id="liquid-basics">Liquid Basics</h2>
 
 <p>In my <a href="http://radishlab.com/2015/10/a-practical-introduction-to-nationbuilder/" target="_blank">previous post</a>, I went over some high-level key concepts as an introduction to the <a href="http://nationbuilder.com/" target="_blank">NationBuilder</a> platform. Now, and over my next few articles, I’ll go a bit deeper on the development side with some examples of how to solve common issues on NationBuilder and share lessons I’ve learned along the way. I’ll also provide a few code snippets designed to give you some insight into how NationBuilder works under the hood.</p>
 
 <p>So consider this an introductory series, covering the fundamentals of developing on NationBuilder, with—hopefully—a few tips and tricks everyone can use. And as always, let me know what you think!</p>
-
-<p><img src="../images/desktop.jpg" alt="desktop work station" /></p>
 
 <h2 id="getting-a-feel-for-liquid">Getting a Feel for Liquid</h2>
 
@@ -287,11 +291,11 @@
 
 <h2 id="tagging-pages-and-people">Tagging Pages and People</h2>
 
+<p><img src="../images/themes-screenshot.png" alt="NationBuilder Themes" class="full-width" /></p>
+
 <p>When you set up a new page on NationBuilder, you can add a tag to people under the settings tab of that new page. In the control panel for a page or person, there is a button to tag that page. A tag can also be added automatically when a person takes an action on your website or contacts a broadcaster.</p>
 
-<p><img src="../images/page-tags.png" alt="page tags" /></p>
-
-<p><img src="../images/people-tags.png" alt="people tags" /></p>
+<p><img src="../images/people-tags.png" alt="people tags" class="full-width" /></p>
 
 <p>The <code>{% tag %}</code> logic tag is used to associate pages with a specific page tag with an HTML snippet for display.</p>
 
@@ -308,6 +312,8 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ page.meta_image_url }}"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <p>would render that page’s meta image via the code in the HTML snippet.</p>
+
+<p><img src="../images/page-tags.png" alt="page tags" class="full-width" /></p>
 
 <h2 id="using-page-tags-for-theme-level-customizing">Using Page Tags for Theme-Level Customizing</h2>
 
@@ -348,23 +354,27 @@
 	</article><!-- ./wrap -->
 </div><!-- /#main -->
 
-      <footer role="contentinfo" id="site-footer">
-	<nav role="navigation" class="menu bottom-menu">
-		<ul class="menu-item">
-		
       
-			<li><a href="/basics/" >Basics</a></li>
-		
+  <footer role="contentinfo" id="site-footer">
+    <nav role="navigation" class="menu bottom-menu">
+      <ul class="menu-item">
       
-			<li><a href="/customizing/" >Customizing</a></li>
-		
+        
+        <li><a href="/basics/" >Basics</a></li>
       
-			<li><a href="/community/" >Community</a></li>
-		
-		</ul>
-	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2016 <a href="/">A Mini Guide to NationBuilder</a> by <a href="http://radishlab.com" target="_blank">Radish Lab</a>.</p>
-</footer>
+        
+        <li><a href="/customizing/" >Customizing</a></li>
+      
+        
+        <li><a href="/community/" >Community</a></li>
+      
+      </ul>
+    </nav><!-- /.bottom-menu -->
+    <p class="copyright">&#169; 2016 <a href="/">A Mini Guide to NationBuilder</a> by <a href="http://radishlab.com" target="_blank">Radish Lab</a>.</p>
+  </footer>
+
+
+
 
     </div>
 

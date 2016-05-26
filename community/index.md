@@ -19,9 +19,9 @@ ads: false
 {: .center-container}
 ![bullhorn](../images/bullhorn.png)
 
-Now, I’m going to cover how NationBuilder keeps track of users on your site and how you can communicate with those users. This is a big part of the power behind the NationBuilder platform which simplifies this connection in some really useful ways.
+The **People** section and **Communication** section of your NationBuilder control panel are closely related. Together, they help you organize, filter, track, and interact with your users keeps track of users. This is a big part of the power behind the NationBuilder platform which simplifies this connection in some really useful ways.
 
-Let’s begin in the People section. This is where any user that interacts with your site is stored and accessed. All people are essentially on a single list and filtered with tags and such. When a user fills out a form for the first time, NationBuilder will create a record in the People section with the data routed to their corresponding fields.
+Let’s begin in the **People** section. This is where any user that interacts with your site is stored and accessed. All people are essentially on a single list and filtered with tags and such. When a user fills out a form for the first time, NationBuilder will create a record in the **People** section with the data routed to their corresponding fields.
 
 As an example, this is the template of a default join page:
 
@@ -36,7 +36,7 @@ As an example, this is the template of a default join page:
 </div>
 {% endraw %}{% endhighlight %}
 
-The first liquid call, <code>{% raw %}{% text_field "first_name", class:"text" %}{% endraw %}</code>, is going to populate the **First Name** field in the people section. But the actual page will render the normal form HTML.
+The first Liquid call, <code>{% raw %}{% text_field "first_name", class:"text" %}{% endraw %}</code>, is going to populate the **First Name** field in the **People** section. But the actual page will render the normal form HTML.
 
 So...
 
@@ -50,20 +50,20 @@ And the email field renders similarly:
 
 {% highlight html %}{% raw %}{% email_field "email", class:"text" %}{% endraw %}{% endhighlight %}
 
-which becomes:
+becomes:
 
 {% highlight html %}{% raw %}<input class="text" id="signup_email" name="signup[email]" type="email" />{% endraw %}{% endhighlight %}
 
 The first attribute (**text_field** and **email_field**) defines the input type, and the class field allows you to pass classes through to the HTML tag. The ID and name are automatically generated because they change depending on the page type (**signup**, **petition**, **event RSVP**, etc.) in question.
 
-![page tags](../images/event-screenshot.png){: .full-width}
+![event](../images/event-screenshot.png){: .full-width}
 
 ## Tagging
 
 {: .center-container}
 ![People Tag](../images/tag.png)
 
-A tag can be added automatically to a person when they take an action on your website or contact a broadcaster. These tags sort people in your database based on a particular action they took. So anyone who signs a particular petition, for example, would then have that tag.
+In addition to adding a tag manually via the control panel, a tag can be added automatically to a person when they take an action on your website or contact a broadcaster. These tags sort people in your database based on a particular action they took. So anyone who signs a given petition, for example, would then have that tag.
 
 If you want to add, edit, merge, or generally clean up these people tags, go to **People > Tags > View all**.
 
@@ -79,14 +79,14 @@ You can also [filter people by tag](http://nationbuilder.com/how_to_filter){:tar
 
 People in the NationBuilder database are either Supporters, Prospects, or Non-Supporters.
 
-*   **A Supporter** has explicitly opted into receiving bulk communications (email blasts, sms blasts).
+*   **A Supporter** has explicitly opted into receiving bulk communications (email blasts, SMS blasts).
 *   **A Non-Supporter** has explicitly opted out of receiving bulk communications.
 *   **A Prospect** has neither opted into nor out of bulk communications, but is in your database for some reason (tweeted at you, emailed a broadcaster, voter file import, etc.)
 
-NationBuilder restricts users from being able to send out email blasts to prospects and non-supporters, and will automatically remove those profiles from the recipient list if they’re on it. When a user signs up for a email blast, really what they’re doing is:
+NationBuilder restricts users from being able to send out email blasts to prospects and non-supporters, and will automatically remove those profiles from the recipient list if they’re on it. When a user signs up for an email blast, really what they’re doing is:
 
 1.  Opting into email support and becoming a "supporter" of the nation
-2.  Assigning a tag to themselves that is used to send mailings via. For example, there exist tags like **Weekly Newsletter tag**, **Monthly Newsletter tag**, etc. and when an email blast is sent, the recipient list is set to **users tagged with Weekly Newsletter**.
+2.  Assigning a tag to themselves that is used to send mailings via. For example, there exist tags like **Weekly Newsletter**, **Monthly Newsletter**, etc. and when an email blast is sent, the recipient list is set to **users tagged with Weekly Newsletter**.
 
 More on formatting and controlling email blasts [here](http://nationbuilder.com/how_to_create_an_email_blast){:target="_blank"}.
 
@@ -98,4 +98,4 @@ And lastly, say _you_ want to be notified whenever someone takes an action on a 
 
 And that’s a basic introduction to communicating with your users on NationBuilder. The next level of engagement would be [paths](http://nationbuilder.com/create_paths){:target="_blank"} which is NationBuilder’s way of allowing you to keep users on track toward a specific goal.
 
-Check back for my last installment in this series on memberships, signups, and actions. Until then!
+Be sure to keep your **People** section organized and up to date. Provide value for your users and don't spam people ever. NationBuilder is a powerful tool and the more you use it, the better able you'll be to do right by your users.

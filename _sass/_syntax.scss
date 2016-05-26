@@ -25,6 +25,10 @@ pre.highlight {
 	@include font-size(16);
 	border: 1px solid darken($body-color, 5);
 	border-radius: $border-radius;
+  background-color: $superlightgray;
+  @include media($micro) {
+    border-radius: 0;
+  }
 	pre {
 		position: relative;
 		margin: 0;

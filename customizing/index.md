@@ -246,6 +246,10 @@ To add or remove a tag associated with a signup form, go to: **Signup settings >
 
 ## Data and Forms
 
+NationBuilder defaults to a single input field for an address so when they are separated out into multiple fields, “require address” needs to remain unchecked in that page's signup settings.
+
+This is what enables backend validation on that default one-line address input field. Therefore, it needs to be off to keep from running validation on a field that isn't in the form.
+
 ![unlock](../images/unlock.png){: .full-width}
 
 Very often, you'll want a field in your form that NationBuilder doesn’t have as a default. To include such a field, you’ll need to do a bit of customizing.

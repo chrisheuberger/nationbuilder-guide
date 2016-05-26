@@ -3,15 +3,15 @@
 
   <title>A Mini Guide to NationBuilder</title>
   <generator uri="https://github.com/jekyll/jekyll">Jekyll v3.0.5</generator>
-    <icon>/apple-touch-icon-precomposed.png</icon>
+    <icon>/nationbuilder-guide//apple-touch-icon-precomposed.png</icon>
   <subtitle>Radish Lab's Tips & Techniques for using the NationBuilder platform</subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="/" rel="alternate" type="text/html"/>
-  <updated>2016-05-25T20:14:16-04:00</updated>
-  <id>/</id>
+  <link href="/nationbuilder-guide//atom.xml" rel="self"/>
+  <link href="/nationbuilder-guide//" rel="alternate" type="text/html"/>
+  <updated>2016-05-25T20:19:47-04:00</updated>
+  <id>/nationbuilder-guide//</id>
   <author>
     <name>Radish Lab</name>
-    <uri>/</uri>
+    <uri>/nationbuilder-guide//</uri>
     <email>webmaster@radishlab.com</email>
   </author>
 

@@ -27,7 +27,3 @@ NationBuilder is an online content management system with a host of built-in fea
 ![signup form](../images/signup.png)
 
 Among its many components are a robust donation platform, volunteer admin system, calendar and event ticketing integration, and some powerful sharing tools. So it's a complex piece of software, but the more you work with it, the more you see the thought that went into making every piece connect as seamlessly as possible.
-
-
-
-

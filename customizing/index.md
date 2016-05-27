@@ -58,7 +58,7 @@ For loops are great for quickly targeting a group of pages or posts.
 
 #### For Loop Example 1
 
-You could use a for loop to access a page's children with the the page.children object.
+You could use a for loop to access a page's children with the the `page.children` object.
 
 So this would go in the parent page’s template:
 
@@ -240,7 +240,9 @@ We’ll start in the NationBuilder Control Panel, where you can customize action
 
 ![members](../images/members.png){: .full-width}
 
-Many NationBuilder page types allow for visitors to take an action like sign a petition, make a donation, or RSVP to an event. And for each action, there are settings you can control by going to **[Page name] > Settings > [Action] settings**. So for a page with page type **Signup**, that tab would be labeled **Signup settings**. This is where you can do things like automatically add tags to any person who signs up on your site.
+Many NationBuilder page types allow for visitors to take an action like sign a petition, make a donation, or RSVP to an event. And for each action, there are settings you can control by going to **[Page name] > Settings > [Action] settings**. So for a page with page type **Signup**, that tab would be labeled **Signup settings**.
+
+This is where you can do things like automatically add tags to any person who takes an action on your website. For more info, go [here](http://nationbuilder.com/how_pages_work#action).
 
 To add or remove a tag associated with a signup form, go to: **Signup settings > Radio buttons**. You can allow users to select multiple tags here: **Signup settings > Basics** in which case the **Radio buttons** section will be renamed **Checkboxes**. For more info, check out how to [create a new tag for a signup form](http://nationbuilder.com/how_to_signup#create){:target="_blank"}.
 
@@ -254,7 +256,7 @@ This is what enables backend validation on that default one-line address input f
 
 Very often, you'll want a field in your form that NationBuilder doesn’t have as a default. To include such a field, you’ll need to do a bit of customizing.
 
-The first step to customizing forms is knowing how to direct the data to the correct place. Data from forms are either stored in one of the already existing signup fields ([signup variables](http://nationbuilder.com/signup_variables){:target="_blank"}) or in [custom fields](http://nationbuilder.com/when_to_use_custom_fields){:target="_blank"}.
+The first step to customizing forms is knowing how to direct the data to the correct place. Data from forms are either stored in one of the already existing signup fields ([signup variables](http://nationbuilder.com/signup_variables){:target="_blank"}) or in [custom fields](http://nationbuilder.com/when_to_use_custom_fields){:target="_blank"}. Some examples of how to implement custom fields are [here](http://nationbuilder.com/request_custom_people_fields_on_webpages).
 
 ![join page](../images/join-screenshot.png){: .full-width}
 

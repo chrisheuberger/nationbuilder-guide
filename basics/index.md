@@ -161,20 +161,24 @@ Stick this snippet on any page to list out what each variable is for that partic
 {% highlight html %}{% raw %}
 <div class="reference">
   <h2>For Reference</h2>
-  <p>page excerpt = {% if page.excerpt.size > 0 %} <strong>{{ page.excerpt }}</strong> {% else %} <strong>There is no page excerpt.</strong></p>
-    <p>page ID = <strong>{{ page.id }}</strong></p>
-    <p>page title = <strong>{{ page.title }}</strong></p>
-    <p>page name = <strong>{{ page.name }}</strong></p>
-    <p>tage type name = <strong>{{ page.type_name }}</strong></p>
-    <p>type of page slug = <strong>{{ page.type_slug }}</strong></p>
-    <p>page type icon = <strong>{{ page.icon | icon }}</strong></p>
+  {% if page.excerpt.size > 0 %}
+    <p>page excerpt = <strong>{{ page.excerpt }}</strong></p>
+  {% else %}
+    <p><strong>There is no page excerpt.</strong></p>
+  {% endif %}
+  <p>page ID = <strong>{{ page.id }}</strong></p>
+  <p>page title = <strong>{{ page.title }}</strong></p>
+  <p>page name = <strong>{{ page.name }}</strong></p>
+  <p>tage type name = <strong>{{ page.type_name }}</strong></p>
+  <p>type of page slug = <strong>{{ page.type_slug }}</strong></p>
+  <p>page type icon = <strong>{{ page.icon | icon }}</strong></p>
   {% if page.has_author? %}
     <p>page author = <strong>{{ page.author.published_name }}</strong></p>
   {% else %}
-    <p><strong>this page does not have an author.</strong></p>
+    <p><strong>This page does not have an author.</strong></p>
   {% endif %}
-    <p>when this page was published = <strong>{{ page.published_at | date: '%b %d, %Y %l:%M %p' }}</strong></p>
-    <p>does the site have a primary image? = <strong>{{ page.has_meta_image? }}</strong></p>
+  <p>When this page was published = <strong>{{ page.published_at | date: '%b %d, %Y %l:%M %p' }}</strong></p>
+  <p>Does the site have a primary image? = <strong>{{ page.has_meta_image? }}</strong></p>
 </div>
 {% endraw %}{% endhighlight %}
 
@@ -212,13 +216,23 @@ would render that page’s meta image via the code in the HTML snippet.
 
 By adding and removing page tags, you can easily customize page content and layouts.
 
+#### Step 1: Create a Liquid Variable for a Page’s Tags
+
+To customize our template based on a page’s tags, we’ll first enable NationBuilder’s theme engine to recognize those tags.
+
 By default, NationBuilder Liquid variables include one named `page.tags`, an array of page tags. But you’ll need those tags in a list format to enable NationBuilder’s theme engine to recognize and search for them. This code creates a new variable called `tags_list` and tells NationBuilder its value is a full list of the page’s tags, separated by commas.
 
 {% highlight html %}{% raw %}{% assign tags_list = "" %} {% for tag in page.tags %} {% assign tags_list = tag.name | append: ", " | append: tags_list %} {% endfor %}{% endraw %}{% endhighlight %}
 
-Then you can use if statements to query whether the page has a particular tag, and show or hide the content accordingly.
+This tells NationBuilder that `tags_list` is now a list of the page’s tags.
 
-#### Example
+#### Step 2: Choose Your Tags
+
+Before you code your templates, it's a good iea to map out and record [what each tag will do](http://nationbuilder.com/creating_a_tag_library){:target="_blank"}.
+
+#### Step 3: Code Your Template
+
+Use if statements to query whether the page has a particular tag, and show or hide the content accordingly:
 
 {% highlight html %}{% raw %}
 {% if tags_list contains "sample tag" %}
@@ -226,6 +240,10 @@ Then you can use if statements to query whether the page has a particular tag, a
 {% endif %}
 {% endraw %}{% endhighlight %}
 
-Then just add or remove tags to a page to control its content.
+#### Step 4: Add Your Custom Tag to the Page
+
+Then just add or remove tags to a page in the control panel to govern its content.
+
+Note: If changes don’t appear, NationBuilder may have just cached the page. Try manually [clearing the site’s cache](http://www.refreshyourcache.com/en/home/){:target="_blank"} to see if that solves the problem before debugging your code.
 
 There, now you know the basics of Liquid and NationBuilder!

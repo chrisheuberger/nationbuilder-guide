@@ -11,4 +11,4 @@
 
 #### Site
 
-[https://radishlab.github.io/nationbuilder-guide/](https://radishlab.github.io/nationbuilder-guide/)
+[radishlab.github.io/nationbuilder-guide](http://radishlab.github.io/nationbuilder-guide/)

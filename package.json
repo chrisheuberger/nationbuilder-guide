@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "A Jekyll starter site",
-  "author": "Chris Heuberger <chris@radishlab.com.com>",
+  "author": "Radish Lab <nationbuilder-guide@radishlab.com",
   "homepage": "http://www.radishlab.com/",
   "license": "The MIT License (MIT)",
   "devDependencies": {

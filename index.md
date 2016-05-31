@@ -21,7 +21,7 @@ We're also certified NationBuilder Architects and committed to the open exchange
 
 ## About NationBuilder
 
-NationBuilder is an online content management system with a host of built-in features. Essentially it's as a platform for making websites with a ready-made framework for organizing, coordinating, and communicating with users. It can be a great option for nonprofits, educational institutions, advocacy groups, and political organizations; anyone who wants to raise funds, hold an event, boost awareness, spark action, or create a movement.
+NationBuilder is an online content management system with a host of built-in features. Essentially it's a platform for making websites with a ready-made framework for organizing, coordinating, and communicating with users. It can be a great option for nonprofits, educational institutions, advocacy groups, and political organizations; anyone who wants to raise funds, hold an event, boost awareness, spark action, or create a movement.
 
 {: .center-container}
 ![signup form](images/signup.png)

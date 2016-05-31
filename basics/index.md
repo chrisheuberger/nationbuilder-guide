@@ -16,13 +16,13 @@ ads: false
 
 ## Hello NationBuilder
 
-To begin with [NationBuilder](http://nationbuilder.com/){:target="_blank"}, you'll want to set up an account (you can start with a free trial) and follow the instructions provided. You might take a look at thier public themes [here](http://nationbuilder.com/public_themes){:target="_blank"} to see what's avialable out of the box.
+To begin with [NationBuilder](http://nationbuilder.com/){:target="_blank"}, you'll want to set up an account (you can start with a free trial) and follow the instructions provided. You might take a look at their public themes [here](http://nationbuilder.com/public_themes){:target="_blank"} to see what's available out of the box.
 
 ![NationBuilder Themes](../images/themes-screenshot.png){: .full-width}
 
 The all-important docs are [here](http://nationbuilder.com/docs){:target="_blank"} and are organized the way NationBuilder dashboard is organized with separate categories for people, website, communication, finances, settings, and data.
 
-If you need help or have a question to ask, their [support section](http://nationbuilder.com/support){:target="_blank"} includes [demos](http://nationbuilder.com/demos){:target="_blank"}, [workshops](http://nationbuilder.com/recorded_trainings){:target="_blank"} , and answers to just about any question you could have. There's also a sizable video library of [NationBuilder tutorials](https://vimeo.com/nationbuilder/videos){:target="_blank"}. But I would reccommend starting with their [Intro to NationBuilder](http://nationbuilder.com/course_intro_to_nationbuilder){:target="_blank"} guided course to get a lay of the land.
+If you need help or have a question to ask, their [support section](http://nationbuilder.com/support){:target="_blank"} includes [demos](http://nationbuilder.com/demos){:target="_blank"}, [workshops](http://nationbuilder.com/recorded_trainings){:target="_blank"} , and answers to just about any question you could have. There's also a sizable video library of [NationBuilder tutorials](https://vimeo.com/nationbuilder/videos){:target="_blank"}. But I would recommend starting with their [Intro to NationBuilder](http://nationbuilder.com/course_intro_to_nationbuilder){:target="_blank"} guided course to get a lay of the land.
 
 For more advanced stuff, check out their [Developer blog](http://nationbuilder.com/developers){:target="_blank"} to learn more about their API.
 
@@ -148,7 +148,7 @@ Liquid works by adding page, user, site, and request variables into a page or a 
 
 ![Liquid](../images/liquid-icon-curly-brackets.png){: .full-width}
 
-It's pretty impressive how much Liquid can accomplish. For example, you can see that the **layout.html** file already contains <code>{% raw %}{{ content_for_header }}{% endraw %}</code> in its head tags as well as <code>{% raw %}{% include "nav" %}{% endraw %}</code> and <code>{% raw %}{{ content_for_footer }}{% endraw %}</code> in its body tags, all of which load jQuery scripts, meta data, and other critical code.
+It's pretty impressive how much Liquid can accomplish. For example, you can see that the **layout.html** file already contains <code>{% raw %}{{ content_for_header }}{% endraw %}</code> in its head tags as well as <code>{% raw %}{% include "nav" %}{% endraw %}</code> and <code>{% raw %}{{ content_for_footer }}{% endraw %}</code> in its body tags, all of which load jQuery scripts, metadata, and other critical code.
 
 ## Pages and People
 
@@ -228,7 +228,7 @@ This tells NationBuilder that `tags_list` is now a list of the page’s tags.
 
 #### Step 2: Choose Your Tags
 
-Before you code your templates, it's a good iea to map out and record [what each tag will do](http://nationbuilder.com/creating_a_tag_library){:target="_blank"}.
+Before you code your templates, it's a good idea to map out and record [what each tag will do](http://nationbuilder.com/creating_a_tag_library){:target="_blank"}.
 
 #### Step 3: Code Your Template
 

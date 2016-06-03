@@ -2,8 +2,8 @@
 
 title: A Mini Guide to NationBuilder
 description: "Radish Lab's Tips & Techniques for using the NationBuilder platform"
-logo: images/radish-lab-square-logo-twitter.png # 120x120 px default image used for Twitter summary card
-teaser: images/landing-hero.png # 400x250 px default teaser image used in image archive grid
+logo: liquid-square-twitter.png # 120x120 px default image used for Twitter summary card
+teaser: landing-hero.png # 400x250 px default teaser image used in image archive grid
 locale: en
 url: /nationbuilder-guide
 
@@ -42,7 +42,7 @@ owner:
     ad-client:
     ad-slot:
   bio: "Radish Lab is an interactive agency focusing on social impact projects."
-  avatar: radish-lab-square-logo.png # 160x160 px image for author byline
+  avatar: liquid-square.png # 160x160 px image for author byline
   disqus-shortname:
 
 exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]

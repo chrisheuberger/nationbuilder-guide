@@ -64,3 +64,5 @@ Please allow us some time to respond. And thanks for contributing!
 * [NationBuilder FAQs](http://nationbuilder.com/questions)
 * [NationBuilder Developer's Blog](http://nationbuilder.com/developers)
 * [NationBuilder Designer's Blog](http://nationbuilder.com/designers)
+
+If you have any questons or feedback, please email us at [nationbuilder-guide@radishlab.com](mailto:nationbuilder-guide@radishlab.com)

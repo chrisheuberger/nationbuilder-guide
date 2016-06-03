@@ -2,16 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>A Mini Guide to NationBuilder</title>
-  <generator uri="https://github.com/jekyll/jekyll">Jekyll v3.0.5</generator>
-    <icon>/apple-touch-icon-precomposed.png</icon>
+  <generator uri="https://github.com/jekyll/jekyll">Jekyll v3.1.6</generator>
+    <icon>/nationbuilder-guide/apple-touch-icon-precomposed.png</icon>
   <subtitle>Radish Lab's Tips & Techniques for using the NationBuilder platform</subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="/" rel="alternate" type="text/html"/>
-  <updated>2016-05-27T18:50:52-04:00</updated>
-  <id>/</id>
+  <link href="/nationbuilder-guide/atom.xml" rel="self"/>
+  <link href="/nationbuilder-guide/" rel="alternate" type="text/html"/>
+  <updated>2016-06-03T12:14:06-04:00</updated>
+  <id>/nationbuilder-guide/</id>
   <author>
     <name>Radish Lab</name>
-    <uri>/</uri>
+    <uri>/nationbuilder-guide/</uri>
     <email>webmaster@radishlab.com</email>
   </author>
 

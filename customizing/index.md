@@ -18,7 +18,7 @@ ads: false
 
 ### Conditionals
 
-Conditionals, or "if statements", are when you say, "I'll do this under one condition." Let’s begin with a few basic if statements.
+Conditionals, or "if statements," are when you say, "I'll do this under one condition." Let’s begin with a few basic if statements.
 
 {% highlight html %}{% raw %}
 {% if user.name == 'Mika' }
@@ -242,7 +242,7 @@ We’ll start in the NationBuilder Control Panel, where you can customize action
 
 Many NationBuilder page types allow for visitors to take an action like sign a petition, make a donation, or RSVP to an event. And for each action, there are settings you can control by going to **[Page name] > Settings > [Action] settings**. So for a page with page type **Signup**, that tab would be labeled **Signup settings**.
 
-This is where you can do things like automatically add tags to any person who takes an action on your website. For more info, go [here](http://nationbuilder.com/how_pages_work#action).
+This is where you can do things like automatically add tags to any person who takes an action on your website. For more info, go [here](http://nationbuilder.com/how_pages_work#action){:target="_blank"}.
 
 To add or remove a tag associated with a signup form, go to: **Signup settings > Radio buttons**. You can allow users to select multiple tags here: **Signup settings > Basics** in which case the **Radio buttons** section will be renamed **Checkboxes**. For more info, check out how to [create a new tag for a signup form](http://nationbuilder.com/how_to_signup#create){:target="_blank"}.
 
@@ -256,7 +256,7 @@ This is what enables backend validation on that default one-line address input f
 
 Very often, you'll want a field in your form that NationBuilder doesn’t have as a default. To include such a field, you’ll need to do a bit of customizing.
 
-The first step to customizing forms is knowing how to direct the data to the correct place. Data from forms are either stored in one of the already existing signup fields ([signup variables](http://nationbuilder.com/signup_variables){:target="_blank"}) or in [custom fields](http://nationbuilder.com/when_to_use_custom_fields){:target="_blank"}. Some examples of how to implement custom fields are [here](http://nationbuilder.com/request_custom_people_fields_on_webpages).
+The first step to customizing forms is knowing how to direct the data to the correct place. Data from forms are either stored in one of the already existing signup fields ([signup variables](http://nationbuilder.com/signup_variables){:target="_blank"}) or in [custom fields](http://nationbuilder.com/when_to_use_custom_fields){:target="_blank"}. Some examples of how to implement custom fields are [here](http://nationbuilder.com/request_custom_people_fields_on_webpages){:target="_blank"}.
 
 ![join page](../images/join-screenshot.png){: .full-width}
 
@@ -294,6 +294,6 @@ This associates a partial HTML template (**_signup_form.html** in the theme file
   {% endif %}
 {% endraw %}{% endhighlight %}
 
-The above code first checks for login status. If the user isn’t logged-in, it would display only the email address field. Then, the form housed in this partial would be submitted through the associated page (default signup page in this case).
+The above code first checks for login status. If the user isn’t logged in, it would display only the email address field. Then, the form housed in this partial would be submitted through the associated page (default signup page in this case).
 
 There are a lot of moving parts in a NationBuilder website and following the chain of command can be tricky with all the partials and subpages involved. But there's also lots of resources out there to help you figure out any task. This collection of [Liquid Snippets](http://nationbuilder.com/liquid_template_examples){:target="_blank"} is mighty handy when it comes to specific, slightly more advanced functionality. Good luck!

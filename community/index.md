@@ -19,7 +19,7 @@ ads: false
 {: .center-container}
 ![bullhorn](../images/bullhorn.png)
 
-The **People** section and **Communication** section of your NationBuilder control panel are closely related. Together, they help you organize, filter, track, and interact with your users keeps track of users. This is a big part of the power behind the NationBuilder platform which simplifies this connection in some really useful ways.
+The **People** section and **Communication** section of your NationBuilder control panel are closely related. Together, they help you organize, filter, track, and interact with your users. This is a big part of the power behind the NationBuilder platform which simplifies this connection in some really useful ways.
 
 Let’s begin in the **People** section. This is where any user that interacts with your site is stored and accessed. All people are essentially on a single list and filtered with tags and such. When a user fills out a form for the first time, NationBuilder will create a record in the **People** section with the data routed to their corresponding fields.
 
@@ -92,7 +92,7 @@ More on formatting and controlling email blasts [here](http://nationbuilder.com/
 
 You can also assign a tag to be used as a subscription option, so that "unsubscribing" actually becomes removing the tag from that profile. Full details [here](http://nationbuilder.com/how_to_use_the_unsubscribe_page){:target="_blank"}.
 
-And lastly, say _you_ want to be notified whenever someone takes an action on a page. First, make sure whatever email address you want to use is set up as an admin user. To do this, log in with that email address and go to **Settings > Your account > Email notifications** and check the box next to whichever action you wish to trigger an email. The column refers to who would trigger that email. Instructions are [here](http://nationbuilder.com/notification_emails#adjust).
+And lastly, say _you_ want to be notified whenever someone takes an action on a page. First, make sure whatever email address you want to use is set up as an admin user. To do this, log in with that email address and go to **Settings > Your account > Email notifications** and check the box next to whichever action you wish to trigger an email. The column refers to who would trigger that email. Instructions are [here](http://nationbuilder.com/notification_emails#adjust){:target="_blank"}.
 
 ![email notifications](../images/email-screenshot.png)
 

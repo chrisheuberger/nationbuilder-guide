@@ -22,7 +22,7 @@ To begin with [NationBuilder](http://nationbuilder.com/){:target="_blank"}, you'
 
 The all-important docs are [here](http://nationbuilder.com/docs){:target="_blank"} and are organized the way NationBuilder dashboard is organized with separate categories for people, website, communication, finances, settings, and data.
 
-If you need help or have a question to ask, their [support section](http://nationbuilder.com/support){:target="_blank"} includes [demos](http://nationbuilder.com/demos){:target="_blank"}, [workshops](http://nationbuilder.com/recorded_trainings){:target="_blank"} , and answers to just about any question you could have. There's also a sizable video library of [NationBuilder tutorials](https://vimeo.com/nationbuilder/videos){:target="_blank"}. But I would recommend starting with their [Intro to NationBuilder](http://nationbuilder.com/course_intro_to_nationbuilder){:target="_blank"} guided course to get a lay of the land.
+If you need help or have a question to ask, their [support section](http://nationbuilder.com/support){:target="_blank"} includes [demos](http://nationbuilder.com/demos){:target="_blank"}, [workshops](http://nationbuilder.com/recorded_trainings){:target="_blank"} , and answers to just about any question you could have. There's also a sizable video library of [NationBuilder tutorials](https://vimeo.com/nationbuilder/videos){:target="_blank"}. I would recommend starting with their [Intro to NationBuilder](http://nationbuilder.com/course_intro_to_nationbuilder){:target="_blank"} guided course to get a lay of the land.
 
 For more advanced stuff, check out their [Developer blog](http://nationbuilder.com/developers){:target="_blank"} to learn more about their API.
 
@@ -50,19 +50,14 @@ NationBuilder uses [Theme Sync](http://nationbuilder.com/theme_sync){:target="_b
 
 It’s also useful to remember the two levels of NationBuilder editing. [Theme-level editing](http://nationbuilder.com/theme_documentation){:target="_blank"} is modifying page types across your entire website. To do that from your control panel, go to **Website > Theme**. [Page-level](http://nationbuilder.com/how_pages_work){:target="_blank"} editing is modifying a specific page. This will override your theme level template. To do that, go to **Website > Template**.
 
-The most important template files in a NationBuilder project are:
+Probably some of the most important template files in a NationBuilder project are:
 
 *   **layout.html** wraps every page and includes header and footer.
 *   **_columns_1.html** wraps the main content area of a page when the sidebar is turned off.
 *   **_columns_2.html** wraps the main content area of a page when the sidebar is turned on.
 *   **_nav.html** is the top navigation include.
 
-And the most important stylesheets are:
-
-*   **_variables.scc** contains all defined colors and settings.
-*   **theme.scss** is the mobile first stylesheet which controls the overall look of your website.
-*   **_navs.scss** contains base navigation styles.
-*   **_navbar.scss** contains navigation bar styles.
+The primary stylesheet is **theme.scss** which contains your base styles. This is the mobile first stylesheet which controls the overall look of your website. Depending on your theme, other stylesheets will usually be named according to their content.
 
 Familiarize yourself with those files and check out what else lives in a nation’s theme and site folders and you’ll have a good understanding of everything that goes into a NationBuilder website.
 

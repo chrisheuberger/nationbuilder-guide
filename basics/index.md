@@ -16,13 +16,13 @@ ads: false
 
 ## Hello NationBuilder
 
-To begin with [NationBuilder](http://nationbuilder.com/){:target="_blank"}, you'll want to set up an account (you can start with a free trial) and follow the instructions provided. You might take a look at thier public themes [here](http://nationbuilder.com/public_themes){:target="_blank"} to see what's avialable out of the box.
+To begin with [NationBuilder](http://nationbuilder.com/){:target="_blank"}, you'll want to set up an account (you can start with a free trial) and follow the instructions provided. You might take a look at their public themes [here](http://nationbuilder.com/public_themes){:target="_blank"} to see what's available out of the box.
 
 ![NationBuilder Themes](../images/themes-screenshot.png){: .full-width}
 
 The all-important docs are [here](http://nationbuilder.com/docs){:target="_blank"} and are organized the way NationBuilder dashboard is organized with separate categories for people, website, communication, finances, settings, and data.
 
-If you need help or have a question to ask, their [support section](http://nationbuilder.com/support){:target="_blank"} includes [demos](http://nationbuilder.com/demos){:target="_blank"}, [workshops](http://nationbuilder.com/recorded_trainings){:target="_blank"} , and answers to just about any question you could have. There's also a sizable video library of [NationBuilder tutorials](https://vimeo.com/nationbuilder/videos){:target="_blank"}. But I would reccommend starting with their [Intro to NationBuilder](http://nationbuilder.com/course_intro_to_nationbuilder){:target="_blank"} guided course to get a lay of the land.
+If you need help or have a question to ask, their [support section](http://nationbuilder.com/support){:target="_blank"} includes [demos](http://nationbuilder.com/demos){:target="_blank"}, [workshops](http://nationbuilder.com/recorded_trainings){:target="_blank"} , and answers to just about any question you could have. There's also a sizable video library of [NationBuilder tutorials](https://vimeo.com/nationbuilder/videos){:target="_blank"}. I would recommend starting with their [Intro to NationBuilder](http://nationbuilder.com/course_intro_to_nationbuilder){:target="_blank"} guided course to get a lay of the land.
 
 For more advanced stuff, check out their [Developer blog](http://nationbuilder.com/developers){:target="_blank"} to learn more about their API.
 
@@ -50,19 +50,14 @@ NationBuilder uses [Theme Sync](http://nationbuilder.com/theme_sync){:target="_b
 
 It’s also useful to remember the two levels of NationBuilder editing. [Theme-level editing](http://nationbuilder.com/theme_documentation){:target="_blank"} is modifying page types across your entire website. To do that from your control panel, go to **Website > Theme**. [Page-level](http://nationbuilder.com/how_pages_work){:target="_blank"} editing is modifying a specific page. This will override your theme level template. To do that, go to **Website > Template**.
 
-The most important template files in a NationBuilder project are:
+Probably some of the most important template files in a NationBuilder project are:
 
 *   **layout.html** wraps every page and includes header and footer.
 *   **_columns_1.html** wraps the main content area of a page when the sidebar is turned off.
 *   **_columns_2.html** wraps the main content area of a page when the sidebar is turned on.
 *   **_nav.html** is the top navigation include.
 
-And the most important stylesheets are:
-
-*   **_variables.scc** contains all defined colors and settings.
-*   **theme.scss** is the mobile first stylesheet which controls the overall look of your website.
-*   **_navs.scss** contains base navigation styles.
-*   **_navbar.scss** contains navigation bar styles.
+The primary stylesheet is **theme.scss** which contains your base styles. This is the mobile first stylesheet which controls the overall look of your website. Depending on your theme, other stylesheets will usually be named according to their content.
 
 Familiarize yourself with those files and check out what else lives in a nation’s theme and site folders and you’ll have a good understanding of everything that goes into a NationBuilder website.
 
@@ -148,7 +143,7 @@ Liquid works by adding page, user, site, and request variables into a page or a 
 
 ![Liquid](../images/liquid-icon-curly-brackets.png){: .full-width}
 
-It's pretty impressive how much Liquid can accomplish. For example, you can see that the **layout.html** file already contains <code>{% raw %}{{ content_for_header }}{% endraw %}</code> in its head tags as well as <code>{% raw %}{% include "nav" %}{% endraw %}</code> and <code>{% raw %}{{ content_for_footer }}{% endraw %}</code> in its body tags, all of which load jQuery scripts, meta data, and other critical code.
+It's pretty impressive how much Liquid can accomplish. For example, you can see that the **layout.html** file already contains <code>{% raw %}{{ content_for_header }}{% endraw %}</code> in its head tags as well as <code>{% raw %}{% include "nav" %}{% endraw %}</code> and <code>{% raw %}{{ content_for_footer }}{% endraw %}</code> in its body tags, all of which load jQuery scripts, metadata, and other critical code.
 
 ## Pages and People
 
@@ -161,20 +156,24 @@ Stick this snippet on any page to list out what each variable is for that partic
 {% highlight html %}{% raw %}
 <div class="reference">
   <h2>For Reference</h2>
-  <p>page excerpt = {% if page.excerpt.size > 0 %} <strong>{{ page.excerpt }}</strong> {% else %} <strong>There is no page excerpt.</strong></p>
-    <p>page ID = <strong>{{ page.id }}</strong></p>
-    <p>page title = <strong>{{ page.title }}</strong></p>
-    <p>page name = <strong>{{ page.name }}</strong></p>
-    <p>tage type name = <strong>{{ page.type_name }}</strong></p>
-    <p>type of page slug = <strong>{{ page.type_slug }}</strong></p>
-    <p>page type icon = <strong>{{ page.icon | icon }}</strong></p>
+  {% if page.excerpt.size > 0 %}
+    <p>page excerpt = <strong>{{ page.excerpt }}</strong></p>
+  {% else %}
+    <p><strong>There is no page excerpt.</strong></p>
+  {% endif %}
+  <p>page ID = <strong>{{ page.id }}</strong></p>
+  <p>page title = <strong>{{ page.title }}</strong></p>
+  <p>page name = <strong>{{ page.name }}</strong></p>
+  <p>tage type name = <strong>{{ page.type_name }}</strong></p>
+  <p>type of page slug = <strong>{{ page.type_slug }}</strong></p>
+  <p>page type icon = <strong>{{ page.icon | icon }}</strong></p>
   {% if page.has_author? %}
     <p>page author = <strong>{{ page.author.published_name }}</strong></p>
   {% else %}
-    <p><strong>this page does not have an author.</strong></p>
+    <p><strong>This page does not have an author.</strong></p>
   {% endif %}
-    <p>when this page was published = <strong>{{ page.published_at | date: '%b %d, %Y %l:%M %p' }}</strong></p>
-    <p>does the site have a primary image? = <strong>{{ page.has_meta_image? }}</strong></p>
+  <p>When this page was published = <strong>{{ page.published_at | date: '%b %d, %Y %l:%M %p' }}</strong></p>
+  <p>Does the site have a primary image? = <strong>{{ page.has_meta_image? }}</strong></p>
 </div>
 {% endraw %}{% endhighlight %}
 
@@ -212,13 +211,23 @@ would render that page’s meta image via the code in the HTML snippet.
 
 By adding and removing page tags, you can easily customize page content and layouts.
 
+#### Step 1: Create a Liquid Variable for a Page’s Tags
+
+To customize our template based on a page’s tags, we’ll first enable NationBuilder’s theme engine to recognize those tags.
+
 By default, NationBuilder Liquid variables include one named `page.tags`, an array of page tags. But you’ll need those tags in a list format to enable NationBuilder’s theme engine to recognize and search for them. This code creates a new variable called `tags_list` and tells NationBuilder its value is a full list of the page’s tags, separated by commas.
 
 {% highlight html %}{% raw %}{% assign tags_list = "" %} {% for tag in page.tags %} {% assign tags_list = tag.name | append: ", " | append: tags_list %} {% endfor %}{% endraw %}{% endhighlight %}
 
-Then you can use if statements to query whether the page has a particular tag, and show or hide the content accordingly.
+This tells NationBuilder that `tags_list` is now a list of the page’s tags.
 
-#### Example
+#### Step 2: Choose Your Tags
+
+Before you code your templates, it's a good idea to map out and record [what each tag will do](http://nationbuilder.com/creating_a_tag_library){:target="_blank"}.
+
+#### Step 3: Code Your Template
+
+Use if statements to query whether the page has a particular tag, and show or hide the content accordingly:
 
 {% highlight html %}{% raw %}
 {% if tags_list contains "sample tag" %}
@@ -226,6 +235,10 @@ Then you can use if statements to query whether the page has a particular tag, a
 {% endif %}
 {% endraw %}{% endhighlight %}
 
-Then just add or remove tags to a page to control its content.
+#### Step 4: Add Your Custom Tag to the Page
+
+Then just add or remove tags to a page in the control panel to govern its content.
+
+Note: If changes don’t appear, NationBuilder may have just cached the page. Try manually [clearing the site’s cache](http://www.refreshyourcache.com/en/home/){:target="_blank"} to see if that solves the problem before debugging your code.
 
 There, now you know the basics of Liquid and NationBuilder!

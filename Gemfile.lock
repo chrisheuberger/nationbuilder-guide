@@ -156,7 +156,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 104)
-  jekyll
+  jekyll (~> 3.0)
   jekyll-gist
   jekyll-sass-converter
   jekyll-sitemap

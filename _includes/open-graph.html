@@ -9,6 +9,7 @@
   {% endif %}
 	<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 	<meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:image" content="http://radishlab.github.io/nationbuilder-guide/images/nationbuilder-guide-social.png" />
 
   <!-- Twitter Cards -->
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -19,11 +20,6 @@
   {% endif %}
   {% if site.owner.twitter %}<meta name="twitter:site" content="@RadishLab">{% endif %}
   {% if author.twitter %}<meta name="twitter:creator" content="@RadishLab">{% endif %}
-  {% if page.image.feature %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ site.url }}/images/{{ page.image.feature }}">
-  {% else %}
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="http://radishlab.github.io/nationbuilder-guide/images/liquid-square-twitter.png">
-  {% endif %}
+  <meta name="twitter:image" content="http://radishlab.github.io/nationbuilder-guide/images/nationbuilder-guide-social.png">
   <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />

@@ -31,7 +31,7 @@ For more advanced stuff, check out their [Developer blog](http://nationbuilder.c
 When getting acquainted with NationBuilder, the control panel is a good place to start. This is where all aspects of your "nation" are managed. A nation can have many websites, but they can all be managed in one place and connected in useful ways here. The control panel includes a dashboard where you can monitor activity as well as the following items:
 
 * The **People** section is your database where you can manage all interactions with anyone who has taken an action on your site. So if someone signs a petition, you can find them here and filter people in all sorts of ways to target certain groups.
-*The **Website** section is where you build your site page-by-page. It's where you control content and everything that the user sees in the browser.
+* The **Website** section is where you build your site page-by-page. It's where you control content and everything that the user sees in the browser.
 * **Communication** is where you manage outreach so anything related to email, text, or social media engagement lives here.
 * **Finances** is where you can track donations, invoices, expenditures, and all transactions.
 * **Settings** is where you make decisions that will apply to your nation globally. Not be confused with site settings which only pertain to your website, this section is more about creating memberships, setting permissions, connecting your bank account, and customizing high-level stuff.
@@ -89,7 +89,7 @@ This would limit the amount of words displayed from the post headline to 10 and 
 #### Liquid Output Example 3
 
 Or you could add content to the beginning or end of any output:
-  
+
 {% highlight html %}{% raw %}{{ page.headline | prepend: 'by Author' | append: '<img src="file.jpg">'}}{% endraw %}{% endhighlight %}
 
 This line prepends the words "by Author" in front of the page headline output and then appends an image at the end of it. And now for a few Liquid *logic* examples.
@@ -98,7 +98,7 @@ This line prepends the words "by Author" in front of the page headline output an
 
 {% highlight html %}{% raw %}{% subpage "page_slug" with "features" %}{% endraw %}{% endhighlight %}
 
-This will display the content of the **_features.html** partial template with the settings of the **page_slug** in question. So that Liquid code would go in an HTML template file. 
+This will display the content of the **_features.html** partial template with the settings of the **page_slug** in question. So that Liquid code would go in an HTML template file.
 
 #### Liquid Logic Example 2
 

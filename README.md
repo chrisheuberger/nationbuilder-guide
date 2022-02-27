@@ -2,7 +2,8 @@
 
 A microsite with tips & techniques for developing websites with [NationBuilder](http://nationbuilder.com/).
 
-URL: [https://radishlab.github.io/nationbuilder-guide/](https://radishlab.github.io/nationbuilder-guide/)
+GitHub subdomain URL: [https://chrisbup.github.io/nationbuilder-guide/](https://chrisbup.github.io/nationbuilder-guide/)
+custom domain URL: [https://www.chrisheuberger.com/nationbuilder-guide/](https://www.chrisheuberger.com/nationbuilder-guide/)
 
 ## Built With
 

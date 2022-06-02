@@ -35,13 +35,13 @@ titlecase: true
 
 # Site owner
 owner:
-  name: Radish Lab
-  email: webmaster@radishlab.com
-  twitter: "RadishLab"
+  name: Chris Heuberger
+  email: chrisheuberg@gmail.com
+  twitter: "chrisbup"
   google:
     ad-client:
     ad-slot:
-  bio: "Radish Lab is an interactive agency focusing on social impact projects."
+  bio:
   avatar: liquid-square.png # 160x160 px image for author byline
   disqus-shortname:
 

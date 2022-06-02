@@ -173,7 +173,7 @@
 
 <h4 id="for-loop-example-1">For Loop Example 1</h4>
 
-<p>You could use a for loop to access a page’s children with the the <code class="highlighter-rouge">page.children</code> object.</p>
+<p>You could use a for loop to access a page’s children with the the <code class="language-plaintext highlighter-rouge">page.children</code> object.</p>
 
 <p>So this would go in the parent page’s template:</p>
 
@@ -263,7 +263,7 @@
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">https://nationslug.nationbuilder.com/assets/pages/1/filename.jpg</code></pre></figure>
 
-<p>If you are referencing an image or file within a <code class="highlighter-rouge">&lt;script&gt;</code> tag, upload the file to <strong>Website &gt; Theme &gt; Files</strong> and use the following code:</p>
+<p>If you are referencing an image or file within a <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag, upload the file to <strong>Website &gt; Theme &gt; Files</strong> and use the following code:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">{{ theme['myfile.jpg'] }}</code></pre></figure>
 
@@ -343,7 +343,7 @@
 
 <p><img src="../images/join-screenshot.png" alt="join page" class="full-width" /></p>
 
-<p>To allow users to signup for an email blast, for example, you would create a signup page (or use the existing join page) to control the settings (tag, path, followup, membership assignments, redirects after form submission, whether or not autoresponses are triggered, etc.), and then create a partial HTML template to control the form fields you’d be asking for. You’d associate the two via either the <code class="highlighter-rouge">subpage</code> or <code class="highlighter-rouge">include</code> Liquid tags.</p>
+<p>To allow users to signup for an email blast, for example, you would create a signup page (or use the existing join page) to control the settings (tag, path, followup, membership assignments, redirects after form submission, whether or not autoresponses are triggered, etc.), and then create a partial HTML template to control the form fields you’d be asking for. You’d associate the two via either the <code class="language-plaintext highlighter-rouge">subpage</code> or <code class="language-plaintext highlighter-rouge">include</code> Liquid tags.</p>
 
 <h4 id="signup-form-example">Signup Form Example</h4>
 
@@ -412,7 +412,7 @@
       
       </ul>
     </nav><!-- /.bottom-menu -->
-    <p class="copyright">&#169; 2016 <a href="http://localhost:4000">A Mini Guide to NationBuilder</a> by <a href="http://radishlab.com" target="_blank">Radish Lab</a>.</p>
+    <p class="copyright">&#169; 2022 <a href="http://localhost:4000">A Mini Guide to NationBuilder</a> by <a href="http://radishlab.com" target="_blank">Radish Lab</a>.</p>
   </footer>
 
 
@@ -428,6 +428,15 @@
 
     <script src="http://localhost:4000/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="http://localhost:4000/js/main.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-40748085-8', 'auto');
+      ga('send', 'pageview');
+    </script>
 
   </body>
 

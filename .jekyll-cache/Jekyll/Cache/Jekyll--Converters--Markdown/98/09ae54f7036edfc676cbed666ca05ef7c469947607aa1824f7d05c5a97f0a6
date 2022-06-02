@@ -1,0 +1,236 @@
+I"�N<nav class="toc">
+<ul id="markdown-toc">
+  <li><a href="#hello-nationbuilder" id="markdown-toc-hello-nationbuilder">Hello NationBuilder</a></li>
+  <li><a href="#getting-a-feel-for-liquid" id="markdown-toc-getting-a-feel-for-liquid">Getting a Feel for Liquid</a></li>
+  <li><a href="#pages-and-people" id="markdown-toc-pages-and-people">Pages and People</a></li>
+</ul>
+
+</nav>
+
+<h2 id="hello-nationbuilder">Hello NationBuilder</h2>
+
+<p>To begin with <a href="http://nationbuilder.com/" target="_blank">NationBuilder</a>, you’ll want to set up an account (you can start with a free trial) and follow the instructions provided. You might take a look at their public themes <a href="http://nationbuilder.com/public_themes" target="_blank">here</a> to see what’s available out of the box.</p>
+
+<p><img src="../images/themes-screenshot.png" alt="NationBuilder Themes" class="full-width" /></p>
+
+<p>The all-important docs are <a href="http://nationbuilder.com/docs" target="_blank">here</a> and are organized the way NationBuilder dashboard is organized with separate categories for people, website, communication, finances, settings, and data.</p>
+
+<p>If you need help or have a question to ask, their <a href="http://nationbuilder.com/support" target="_blank">support section</a> includes <a href="http://nationbuilder.com/demos" target="_blank">demos</a>, <a href="http://nationbuilder.com/recorded_trainings" target="_blank">workshops</a> , and answers to just about any question you could have. There’s also a sizable video library of <a href="https://vimeo.com/nationbuilder/videos" target="_blank">NationBuilder tutorials</a>. I would recommend starting with their <a href="http://nationbuilder.com/course_intro_to_nationbuilder" target="_blank">Intro to NationBuilder</a> guided course to get a lay of the land.</p>
+
+<p>For more advanced stuff, check out their <a href="http://nationbuilder.com/developers" target="_blank">Developer blog</a> to learn more about their API.</p>
+
+<div style="text-align: center;"><iframe src="https://player.vimeo.com/video/129819511?color=62b6cf&amp;title=0&amp;byline=0&amp;portrait=0" width="600" height="376" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+
+<p>When getting acquainted with NationBuilder, the control panel is a good place to start. This is where all aspects of your “nation” are managed. A nation can have many websites, but they can all be managed in one place and connected in useful ways here. The control panel includes a dashboard where you can monitor activity as well as the following items:</p>
+
+<ul>
+  <li>The <strong>People</strong> section is your database where you can manage all interactions with anyone who has taken an action on your site. So if someone signs a petition, you can find them here and filter people in all sorts of ways to target certain groups.
+*The <strong>Website</strong> section is where you build your site page-by-page. It’s where you control content and everything that the user sees in the browser.</li>
+  <li><strong>Communication</strong> is where you manage outreach so anything related to email, text, or social media engagement lives here.</li>
+  <li><strong>Finances</strong> is where you can track donations, invoices, expenditures, and all transactions.</li>
+  <li><strong>Settings</strong> is where you make decisions that will apply to your nation globally. Not be confused with site settings which only pertain to your website, this section is more about creating memberships, setting permissions, connecting your bank account, and customizing high-level stuff.</li>
+</ul>
+
+<h3 id="nationbuilder-website-basics">NationBuilder Website Basics</h3>
+
+<p>When you’re just setting out creating a website, most of your time will be spent in that section. NationBuilder provides a well organized list of How Tos for customizing your site <a href="http://nationbuilder.com/ht_website" target="_blank">here</a> and an <a href="http://nationbuilder.com/designers" target="_blank">Architects blog</a> for diving deeper.</p>
+
+<p>Under <strong>Website &gt; Pages</strong>, you’ll see some boilerplate template pages already there. When you create a new page here, be sure to choose its page type wisely. There are many options, and whichever one you choose will determine what that page will be set up to accomplish within your site. For example, a signup page type comes ready to collect user submissions, with the preloaded capability to customize a form however you need it. But you can’t change a page’s type after it’s been created.</p>
+
+<p><img src="../images/pages-screenshot.png" alt="page types" class="full-width" /></p>
+
+<p>Now a bit about what’s under the hood. NationBuilder is built with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> and uses PostgreSQL for its back-end database, but not much back-end expertise is needed. You also have solid front-end control as well as easy monitoring of comments and activity feeds, advanced spam blocking, reliable server scaling, recruiter and referral tracking, full control over SEO, and built-in Google Analytics.</p>
+
+<p>NationBuilder uses <a href="http://nationbuilder.com/theme_sync" target="_blank">Theme Sync</a> for developing locally on a Mac. Once you create a nation, you’ll want to download your new nation via Theme Sync. Then, you’ll have much greater access to your site’s structure and functionality than the control panel affords you, although you’ll still switch back and forth with the control panel as some stuff can only be done there.</p>
+
+<p>It’s also useful to remember the two levels of NationBuilder editing. <a href="http://nationbuilder.com/theme_documentation" target="_blank">Theme-level editing</a> is modifying page types across your entire website. To do that from your control panel, go to <strong>Website &gt; Theme</strong>. <a href="http://nationbuilder.com/how_pages_work" target="_blank">Page-level</a> editing is modifying a specific page. This will override your theme level template. To do that, go to <strong>Website &gt; Template</strong>.</p>
+
+<p>Probably some of the most important template files in a NationBuilder project are:</p>
+
+<ul>
+  <li><strong>layout.html</strong> wraps every page and includes header and footer.</li>
+  <li><strong>_columns_1.html</strong> wraps the main content area of a page when the sidebar is turned off.</li>
+  <li><strong>_columns_2.html</strong> wraps the main content area of a page when the sidebar is turned on.</li>
+  <li><strong>_nav.html</strong> is the top navigation include.</li>
+</ul>
+
+<p>The primary stylesheet is <strong>theme.scss</strong> which contains your base styles. This is the mobile first stylesheet which controls the overall look of your website. Depending on your theme, other stylesheets will usually be named according to their content.</p>
+
+<p>Familiarize yourself with those files and check out what else lives in a nation’s theme and site folders and you’ll have a good understanding of everything that goes into a NationBuilder website.</p>
+
+<h2 id="getting-a-feel-for-liquid">Getting a Feel for Liquid</h2>
+
+<p>In addition to SCSS and JavaScript, NationBuilder uses the open source templating engine called <a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers" target="_blank">Liquid</a> to access objects and variables. Liquid is based in <a href="https://www.ruby-lang.org/en/" target="_blank">Ruby</a> and was first developed for <a href="https://www.shopify.com/" target="_blank">Shopify</a>. The two basic types of Liquid markup are <strong>output</strong> and <strong>tags</strong>.</p>
+
+<ol>
+  <li>Output variables are used to display dynamic content and are surrounded by double curly brackets <code>{{ like this }}</code>. This format is replaced with the data it references and may resolve to text.</li>
+  <li>Tag markup is surrounded by curly brackets and percent signs <code>{% like this %}</code>. This format is used to define logic like for loops or branching and does not resolve to text.</li>
+</ol>
+
+<h3 id="now-for-a-few-examples">Now for a Few Examples</h3>
+
+<h4 id="liquid-output-example-1">Liquid Output Example 1</h4>
+
+<p>When outputting content, you can add all sorts of filters which are simple methods to manipulate data. So to reformat a date syntax reference, you could write:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{{ event.event.local_start_at | date: '%A, %B %d, %Y at %I:%M %p' }}</code></pre></figure>
+
+<p>The above line will display the date in this format: “Friday, January 1, 2018 at 8:30pm”</p>
+
+<h4 id="liquid-output-example-2">Liquid Output Example 2</h4>
+
+<p>You could also string filters together. Here, I’m using the <code class="highlighter-rouge">truncatewords</code> and <code class="highlighter-rouge">upcase</code> filters:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{{ post.headline | truncatewords: 10 | upcase }}</code></pre></figure>
+
+<p>This would limit the amount of words displayed from the post headline to 10 and then convert that string to all capital letters.</p>
+
+<h4 id="liquid-output-example-3">Liquid Output Example 3</h4>
+
+<p>Or you could add content to the beginning or end of any output:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{{ page.headline | prepend: 'by Author' | append: '<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"file.jpg"</span><span class="nt">&gt;</span>'}}</code></pre></figure>
+
+<p>This line prepends the words “by Author” in front of the page headline output and then appends an image at the end of it. And now for a few Liquid <em>logic</em> examples.</p>
+
+<h4 id="liquid-logic-example-1">Liquid Logic Example 1</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% subpage "page_slug" with "features" %}</code></pre></figure>
+
+<p>This will display the content of the <strong>_features.html</strong> partial template with the settings of the <strong>page_slug</strong> in question. So that Liquid code would go in an HTML template file.</p>
+
+<h4 id="liquid-logic-example-2">Liquid Logic Example 2</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if page.is_homepage? == true %}
+  <span class="nt">&lt;h2&gt;</span>Welcome to the homepage.<span class="nt">&lt;/h2&gt;</span>
+{% endif %}</code></pre></figure>
+
+<p>This code uses the operator <code class="highlighter-rouge">==</code> to check if the user is on the homepage and displays a message accordingly.</p>
+
+<h4 id="liquid-logic-example-3">Liquid Logic Example 3</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if request.current_user.tags contains "new_member" %}
+  <span class="nt">&lt;h2&gt;</span>Welcome, thanks for becoming a member!<span class="nt">&lt;/h2&gt;</span>
+{% endif %}</code></pre></figure>
+
+<p>The above would show the greeting only if a user had new_member among their tags.</p>
+
+<h4 id="liquid-logic-example-4">Liquid Logic Example 4</h4>
+
+<p>You could also use a Liquid logic tag to cycle through a series and output the same piece of code for each instance.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  {% for child in page.children %}
+    <span class="nt">&lt;li&gt;</span>{{ child.name }}<span class="nt">&lt;/li&gt;</span>
+  {% endfor %}
+<span class="nt">&lt;ul&gt;</span></code></pre></figure>
+
+<p>Here, we create a full list of a certain page’s subpages.</p>
+
+<h3 id="how-liquid-is-used-in-nationbuilder">How Liquid is Used in NationBuilder</h3>
+
+<p>Liquid works by adding page, user, site, and request variables into a page or a template file. For example, if you ever wanted to retrieve the name or login status of your user or the URL path of the current page, you would use a Liquid <a href="http://nationbuilder.com/request_variables" target="_blank">request variable</a>. One important distinction to make about the NationBuilder CMS is that user actions are taken using different NationBuilder page types, rather than widgets or plugins. So to create a petition, event page, or general signup page, you’d create a new page with that type. Here are a couple useful documentation links:</p>
+
+<ul>
+  <li><a href="http://nationbuilder.com/liquid_basics" target="_blank">Liquid Basics</a></li>
+  <li><a href="http://nationbuilder.com/liquid" target="_blank">Liquid Object Reference</a></li>
+</ul>
+
+<p><img src="../images/liquid-icon-curly-brackets.png" alt="Liquid" class="full-width" /></p>
+
+<p>It’s pretty impressive how much Liquid can accomplish. For example, you can see that the <strong>layout.html</strong> file already contains <code>{{ content_for_header }}</code> in its head tags as well as <code>{% include "nav" %}</code> and <code>{{ content_for_footer }}</code> in its body tags, all of which load jQuery scripts, metadata, and other critical code.</p>
+
+<h2 id="pages-and-people">Pages and People</h2>
+
+<h3 id="page-variables">Page Variables</h3>
+
+<p>For any page, you’ll be able to call a range of <a href="http://nationbuilder.com/page_variables" target="_blank">page variables</a>.</p>
+
+<p>Stick this snippet on any page to list out what each variable is for that particular page:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"reference"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>For Reference<span class="nt">&lt;/h2&gt;</span>
+  {% if page.excerpt.size &gt; 0 %}
+    <span class="nt">&lt;p&gt;</span>page excerpt = <span class="nt">&lt;strong&gt;</span>{{ page.excerpt }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  {% else %}
+    <span class="nt">&lt;p&gt;&lt;strong&gt;</span>There is no page excerpt.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  {% endif %}
+  <span class="nt">&lt;p&gt;</span>page ID = <span class="nt">&lt;strong&gt;</span>{{ page.id }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>page title = <span class="nt">&lt;strong&gt;</span>{{ page.title }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>page name = <span class="nt">&lt;strong&gt;</span>{{ page.name }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>tage type name = <span class="nt">&lt;strong&gt;</span>{{ page.type_name }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>type of page slug = <span class="nt">&lt;strong&gt;</span>{{ page.type_slug }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>page type icon = <span class="nt">&lt;strong&gt;</span>{{ page.icon | icon }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  {% if page.has_author? %}
+    <span class="nt">&lt;p&gt;</span>page author = <span class="nt">&lt;strong&gt;</span>{{ page.author.published_name }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  {% else %}
+    <span class="nt">&lt;p&gt;&lt;strong&gt;</span>This page does not have an author.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  {% endif %}
+  <span class="nt">&lt;p&gt;</span>When this page was published = <span class="nt">&lt;strong&gt;</span>{{ page.published_at | date: '%b %d, %Y %l:%M %p' }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Does the site have a primary image? = <span class="nt">&lt;strong&gt;</span>{{ page.has_meta_image? }}<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>That will give you an idea of what you’re working with and provide a sense of what gets passed through to a page.</p>
+
+<h3 id="tagging-pages-and-people">Tagging Pages and People</h3>
+
+<p>When you set up a new page on NationBuilder, you can add a tag to people under the settings tab of that new page. In the control panel for a page or person, there is a button to tag that page. A tag can also be added automatically when a person takes an action on your website or contacts a broadcaster.</p>
+
+<h5 id="heres-where-you-can-add-a-people-tag">Here’s where you can add a people tag:</h5>
+
+<p><img src="../images/people-tags.png" alt="people tags" class="full-width" /></p>
+
+<h5 id="and-heres-where-you-can-add-a-page-tag">And here’s where you can add a page tag:</h5>
+
+<p><img src="../images/page-tags.png" alt="page tags" class="full-width" /></p>
+
+<p>The <code>{% tag %}</code> logic tag is used to associate pages with a specific page tag with an HTML snippet for display.</p>
+
+<h4 id="page-tag-example">Page Tag Example</h4>
+
+<p>If you had this code on a page:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% tag "show_meta_image" with "partial_meta_image_snippet" %}</code></pre></figure>
+
+<p>adding the tag <code>show meta image</code> to that page would cause it to render the HTML file <strong>_partial_meta_image_snippet.html</strong>. The leading underscore is necessary in the filename when including snippets, but is not included in the Liquid call itself. Adding the prefix “_partial” to all partial snippets is not necessary but is a good way to organize them in your file listing.</p>
+
+<p>Then, this line in <strong>_partial_meta_image_snippet.html</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ page.meta_image_url }}"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>would render that page’s meta image via the code in the HTML snippet.</p>
+
+<h3 id="using-page-tags-for-theme-level-customizing">Using Page Tags for Theme-Level Customizing</h3>
+
+<p>By adding and removing page tags, you can easily customize page content and layouts.</p>
+
+<h4 id="step-1-create-a-liquid-variable-for-a-pages-tags">Step 1: Create a Liquid Variable for a Page’s Tags</h4>
+
+<p>To customize our template based on a page’s tags, we’ll first enable NationBuilder’s theme engine to recognize those tags.</p>
+
+<p>By default, NationBuilder Liquid variables include one named <code class="highlighter-rouge">page.tags</code>, an array of page tags. But you’ll need those tags in a list format to enable NationBuilder’s theme engine to recognize and search for them. This code creates a new variable called <code class="highlighter-rouge">tags_list</code> and tells NationBuilder its value is a full list of the page’s tags, separated by commas.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% assign tags_list = "" %} {% for tag in page.tags %} {% assign tags_list = tag.name | append: ", " | append: tags_list %} {% endfor %}</code></pre></figure>
+
+<p>This tells NationBuilder that <code class="highlighter-rouge">tags_list</code> is now a list of the page’s tags.</p>
+
+<h4 id="step-2-choose-your-tags">Step 2: Choose Your Tags</h4>
+
+<p>Before you code your templates, it’s a good idea to map out and record <a href="http://nationbuilder.com/creating_a_tag_library" target="_blank">what each tag will do</a>.</p>
+
+<h4 id="step-3-code-your-template">Step 3: Code Your Template</h4>
+
+<p>Use if statements to query whether the page has a particular tag, and show or hide the content accordingly:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if tags_list contains "sample tag" %}
+  show custom content
+{% endif %}</code></pre></figure>
+
+<h4 id="step-4-add-your-custom-tag-to-the-page">Step 4: Add Your Custom Tag to the Page</h4>
+
+<p>Then just add or remove tags to a page in the control panel to govern its content.</p>
+
+<p>Note: If changes don’t appear, NationBuilder may have just cached the page. Try manually <a href="http://www.refreshyourcache.com/en/home/" target="_blank">clearing the site’s cache</a> to see if that solves the problem before debugging your code.</p>
+
+<p>There, now you know the basics of Liquid and NationBuilder!</p>
+:ET

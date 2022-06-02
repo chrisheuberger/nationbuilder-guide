@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>A Mini Guide to NationBuilder</title>
-  <generator uri="https://github.com/jekyll/jekyll">Jekyll v3.3.0</generator>
+  <generator uri="https://github.com/jekyll/jekyll">Jekyll v3.9.2</generator>
     <icon>http://localhost:4000/apple-touch-icon-precomposed.png</icon>
   <subtitle>Radish Lab's Tips & Techniques for using the NationBuilder platform</subtitle>
   <link href="http://localhost:4000/atom.xml" rel="self"/>
   <link href="http://localhost:4000/" rel="alternate" type="text/html"/>
-  <updated>2016-11-21T13:07:30-05:00</updated>
+  <updated>2022-06-02T15:03:12-04:00</updated>
   <id>http://localhost:4000/</id>
   <author>
     <name>Radish Lab</name>

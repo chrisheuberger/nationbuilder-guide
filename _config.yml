@@ -16,7 +16,7 @@ permalink: /:categories/:title/
 kramdown:
   toc_levels: 2..2
 highlighter: rouge
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
 

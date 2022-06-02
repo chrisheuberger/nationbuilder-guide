@@ -1,37 +1,19 @@
 # A Mini Guide to NationBuilder
 
-A microsite with tips & techniques for developing websites with [NationBuilder](http://nationbuilder.com/).
+A microsite with tips and techniques for developing websites with [NationBuilder](http://nationbuilder.com/).
 
-GitHub subdomain URL: [https://chrisbup.github.io/nationbuilder-guide/](https://chrisbup.github.io/nationbuilder-guide/)  
-custom domain URL: [https://www.chrisheuberger.com/nationbuilder-guide/](https://www.chrisheuberger.com/nationbuilder-guide/)
+Site URL: [https://nationbuilder-guide.chrisheuberger/](https://nationbuilder-guide.chrisheuberger/)
 
-## Built With
+Built With Jekyll template [Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/)
 
-* Jekyll template [Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/)
-* Stylesheet using Sass
-
-## How to Contribute
-
-We welcome contributions so if you spot any mistakes or see any room for improvement, please let us know by following these steps.
-
-##### Fork, then clone the repo:
-```
-git clone git@github.com:RadishLab/nationbuilder-guide.git
-```
-
-##### If you don't already have Jekyll installed, run:
-```
-gem install jekyll
-```
-
-Check out the [Jekyll docs](https://jekyllrb.com/docs/home/) if you have any questions.
+## Local Development
 
 ##### Install dependencies:
 ```
 bundle install
 ```
 
-##### Open `_config.yml` and comment out the URL like so:
+##### You may need to comment out the URL in `_config.yml` like so:
 ```
 url: # /nationbuilder-guide
 ```
@@ -46,16 +28,14 @@ jekyll build
 jekyll serve
 ```
 
-##### You should then be able to go here in your browser to see the site locally:
+##### View the site locally:
 ```
 http://localhost:4000/
 ```
 
-##### Now you're ready to make your change.
+## Deployment
 
-Then, you can push to your fork and submit a pull request.
-
-Please allow us some time to respond. And thanks for contributing!
+Deployed using Netlify.
 
 ## Helpful References
 * [NationBuilder Docs](http://nationbuilder.com/docs)
@@ -65,5 +45,3 @@ Please allow us some time to respond. And thanks for contributing!
 * [NationBuilder FAQs](http://nationbuilder.com/questions)
 * [NationBuilder Developer's Blog](http://nationbuilder.com/developers)
 * [NationBuilder Designer's Blog](http://nationbuilder.com/designers)
-
-If you have any questons or feedback, please email us at [nationbuilder-guide@radishlab.com](mailto:nationbuilder-guide@radishlab.com)

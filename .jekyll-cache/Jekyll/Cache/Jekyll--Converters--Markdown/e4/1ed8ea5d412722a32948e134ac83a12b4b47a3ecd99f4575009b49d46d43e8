@@ -1,4 +1,4 @@
-I"sL<nav class="toc">
+I"�L<nav class="toc">
 <ul id="markdown-toc">
   <li><a href="#conditionals-and-for-loops" id="markdown-toc-conditionals-and-for-loops">Conditionals and For Loops</a></li>
   <li><a href="#images-assets-and-scripts" id="markdown-toc-images-assets-and-scripts">Images, Assets, and Scripts</a></li>
@@ -47,7 +47,7 @@
 
 <h4 id="for-loop-example-1">For Loop Example 1</h4>
 
-<p>You could use a for loop to access a page’s children with the the <code class="highlighter-rouge">page.children</code> object.</p>
+<p>You could use a for loop to access a page’s children with the the <code class="language-plaintext highlighter-rouge">page.children</code> object.</p>
 
 <p>So this would go in the parent page’s template:</p>
 
@@ -137,7 +137,7 @@
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">https://nationslug.nationbuilder.com/assets/pages/1/filename.jpg</code></pre></figure>
 
-<p>If you are referencing an image or file within a <code class="highlighter-rouge">&lt;script&gt;</code> tag, upload the file to <strong>Website &gt; Theme &gt; Files</strong> and use the following code:</p>
+<p>If you are referencing an image or file within a <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag, upload the file to <strong>Website &gt; Theme &gt; Files</strong> and use the following code:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">{{ theme['myfile.jpg'] }}</code></pre></figure>
 
@@ -217,7 +217,7 @@
 
 <p><img src="../images/join-screenshot.png" alt="join page" class="full-width" /></p>
 
-<p>To allow users to signup for an email blast, for example, you would create a signup page (or use the existing join page) to control the settings (tag, path, followup, membership assignments, redirects after form submission, whether or not autoresponses are triggered, etc.), and then create a partial HTML template to control the form fields you’d be asking for. You’d associate the two via either the <code class="highlighter-rouge">subpage</code> or <code class="highlighter-rouge">include</code> Liquid tags.</p>
+<p>To allow users to signup for an email blast, for example, you would create a signup page (or use the existing join page) to control the settings (tag, path, followup, membership assignments, redirects after form submission, whether or not autoresponses are triggered, etc.), and then create a partial HTML template to control the form fields you’d be asking for. You’d associate the two via either the <code class="language-plaintext highlighter-rouge">subpage</code> or <code class="language-plaintext highlighter-rouge">include</code> Liquid tags.</p>
 
 <h4 id="signup-form-example">Signup Form Example</h4>
 

@@ -88,6 +88,7 @@ DEPENDENCIES
   jekyll (~> 4.2.2)
   jekyll-feed (~> 0.12)
   jekyll-gist
+  jekyll-sass-converter
   jekyll-sitemap
   minima (~> 2.5)
   tzinfo (~> 1.2)

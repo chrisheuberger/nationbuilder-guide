@@ -1,4 +1,4 @@
-I"�N<nav class="toc">
+I"5O<nav class="toc">
 <ul id="markdown-toc">
   <li><a href="#hello-nationbuilder" id="markdown-toc-hello-nationbuilder">Hello NationBuilder</a></li>
   <li><a href="#getting-a-feel-for-liquid" id="markdown-toc-getting-a-feel-for-liquid">Getting a Feel for Liquid</a></li>
@@ -79,7 +79,7 @@
 
 <h4 id="liquid-output-example-2">Liquid Output Example 2</h4>
 
-<p>You could also string filters together. Here, I’m using the <code class="highlighter-rouge">truncatewords</code> and <code class="highlighter-rouge">upcase</code> filters:</p>
+<p>You could also string filters together. Here, I’m using the <code class="language-plaintext highlighter-rouge">truncatewords</code> and <code class="language-plaintext highlighter-rouge">upcase</code> filters:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">{{ post.headline | truncatewords: 10 | upcase }}</code></pre></figure>
 
@@ -105,7 +105,7 @@
   <span class="nt">&lt;h2&gt;</span>Welcome to the homepage.<span class="nt">&lt;/h2&gt;</span>
 {% endif %}</code></pre></figure>
 
-<p>This code uses the operator <code class="highlighter-rouge">==</code> to check if the user is on the homepage and displays a message accordingly.</p>
+<p>This code uses the operator <code class="language-plaintext highlighter-rouge">==</code> to check if the user is on the homepage and displays a message accordingly.</p>
 
 <h4 id="liquid-logic-example-3">Liquid Logic Example 3</h4>
 
@@ -208,11 +208,11 @@
 
 <p>To customize our template based on a page’s tags, we’ll first enable NationBuilder’s theme engine to recognize those tags.</p>
 
-<p>By default, NationBuilder Liquid variables include one named <code class="highlighter-rouge">page.tags</code>, an array of page tags. But you’ll need those tags in a list format to enable NationBuilder’s theme engine to recognize and search for them. This code creates a new variable called <code class="highlighter-rouge">tags_list</code> and tells NationBuilder its value is a full list of the page’s tags, separated by commas.</p>
+<p>By default, NationBuilder Liquid variables include one named <code class="language-plaintext highlighter-rouge">page.tags</code>, an array of page tags. But you’ll need those tags in a list format to enable NationBuilder’s theme engine to recognize and search for them. This code creates a new variable called <code class="language-plaintext highlighter-rouge">tags_list</code> and tells NationBuilder its value is a full list of the page’s tags, separated by commas.</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html">{% assign tags_list = "" %} {% for tag in page.tags %} {% assign tags_list = tag.name | append: ", " | append: tags_list %} {% endfor %}</code></pre></figure>
 
-<p>This tells NationBuilder that <code class="highlighter-rouge">tags_list</code> is now a list of the page’s tags.</p>
+<p>This tells NationBuilder that <code class="language-plaintext highlighter-rouge">tags_list</code> is now a list of the page’s tags.</p>
 
 <h4 id="step-2-choose-your-tags">Step 2: Choose Your Tags</h4>
 

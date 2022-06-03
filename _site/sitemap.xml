@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/community/</loc>
+<loc>/community/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/customizing/</loc>
+<loc>/customizing/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/basics/</loc>
+<loc>/basics/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/google5581a19f19e3673f.html</loc>
+<loc>/google5581a19f19e3673f.html</loc>
 <lastmod>2016-11-21T13:07:30-05:00</lastmod>
 </url>
 </urlset>

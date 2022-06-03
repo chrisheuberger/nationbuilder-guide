@@ -1,0 +1,253 @@
+I"�L<nav class="toc">
+<ul id="markdown-toc">
+  <li><a href="#conditionals-and-for-loops" id="markdown-toc-conditionals-and-for-loops">Conditionals and For Loops</a></li>
+  <li><a href="#images-assets-and-scripts" id="markdown-toc-images-assets-and-scripts">Images, Assets, and Scripts</a></li>
+  <li><a href="#subpages" id="markdown-toc-subpages">Subpages</a></li>
+  <li><a href="#signups-and-actions" id="markdown-toc-signups-and-actions">Signups and Actions</a></li>
+  <li><a href="#data-and-forms" id="markdown-toc-data-and-forms">Data and Forms</a></li>
+</ul>
+
+</nav>
+
+<h2 id="conditionals-and-for-loops">Conditionals and For Loops</h2>
+
+<h3 id="conditionals">Conditionals</h3>
+
+<p>Conditionals, or “if statements,” are when you say, “I’ll do this under one condition.” Let’s begin with a few basic if statements.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if user.name == 'Mika' }
+  Hello Mika
+{% elsif user.name == 'Kygo' }
+  Hello Kygo
+{% endif }</code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if request.current_user.is_volunteer? == true %}
+  Thank you for volunteering!
+{% else %}
+  Will you volunteer?
+{% endif %}</code></pre></figure>
+
+<p>Both of these examples use a Liquid object to determine something about the user and display different content based on that information. Building on that, let’s see how to target a user’s membership type using conditionals.</p>
+
+<p>For example, to make certain pages (or parts of pages) only viewable to certain membership types, first set up <a href="http://nationbuilder.com/create_membership_types" target="_blank">membership types</a> in your nation. Next, add a member type in the NationBuilder control panel called “Sustaining”. Lastly, wrap your page content inside Liquid conditionals that check for membership levels or tags—or otherwise hide the content—like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if request.signup.membership_level_name contains "sustaining" %}
+  <span class="c">&lt;!-- Paying Member Content --&gt;</span>
+{% else %}
+  <span class="c">&lt;!-- Non Paying Member Content --&gt;</span>
+{% endif %}</code></pre></figure>
+
+<h3 id="for-loops">For Loops</h3>
+
+<p><img src="../images/forloop.png" alt="for loops" class="full-width" /></p>
+
+<p>For loops are great for quickly targeting a group of pages or posts.</p>
+
+<h4 id="for-loop-example-1">For Loop Example 1</h4>
+
+<p>You could use a for loop to access a page’s children with the the <code class="language-plaintext highlighter-rouge">page.children</code> object.</p>
+
+<p>So this would go in the parent page’s template:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for page in page.children %}
+  {{ page.slug }}
+{% endfor %}</code></pre></figure>
+
+<p>And that would list the slug of each subpage.</p>
+
+<h4 id="for-loop-example-2">For Loop Example 2</h4>
+
+<p>Images that are uploaded to the <strong>Files</strong> section of a page (attachments) are accessible in a for loop this way:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for attachment in page.attachments limit: 10 %}
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ attachment.url }}"</span> <span class="nt">/&gt;</span>
+{% endfor %}</code></pre></figure>
+
+<p>The above code could go in a partial <strong>named _gallery.html</strong> and if a page had <code>{% include "gallery" %}</code>, it would display all the images that have been uploaded to that page.</p>
+
+<h4 id="for-loop-example-3">For Loop Example 3</h4>
+
+<p>If you want to cycle through iterations where the tag issue is used and show the content only on the homepage, you could put this in <strong>layout.html</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if page.is_homepage? == true %}
+  {% tag "issue" with "homepage_content_block" %}
+{% endif %}</code></pre></figure>
+
+<p>in <strong>_homepage_content_block.html</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for page in tag.most_recent_published_pages_no_pagination %}
+  <span class="nt">&lt;p&gt;</span>page slug: {{ page.slug }}<span class="nt">&lt;br&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span> page name: {{ page.name }}<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span> author%u2019s first name: {{ page.author.first_name }}<span class="nt">&lt;/p&gt;</span>
+{% endfor %}</code></pre></figure>
+
+<p><code>most_recent_published_pages_no_pagination</code> will give you a list of the most recently updated 500 pages, and the tag prefix lets it access the <code>tag_slug</code> used in the original <code>{% tag %}</code> call.</p>
+
+<h4 id="for-loop-example-4">For Loop Example 4</h4>
+
+<p>Similarly, this is a for loop that will display an attachment images within a feed of pages with a certain tag:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for page in tag.most_recent_published_pages limit: 3 %}
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ page.url }}"</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">"{{ page.attachments.first.url }}"</span> <span class="nt">/&gt;&lt;/a&gt;</span>
+{% endfor %}</code></pre></figure>
+
+<p>So if the code above was in a partial named <strong>_show_books.html</strong>, than this line would go in a template file:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% tag "books" with "show_books" %}</code></pre></figure>
+
+<p>And that would display the first image from each of the 3 most recently published pages tagged with books.</p>
+
+<h3 id="now-lets-bring-them-together">Now Let’s Bring Them Together</h3>
+
+<p><img src="../images/sweater.png" alt="code sweater" class="full-width" /></p>
+
+<p>We’ll end with a simple example of an if statement inside a for loop:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for child in page.children }
+  {% if child.type_name == 'Question' }
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"{{ child.url }}"</span><span class="nt">&gt;</span>{{ child.headline }}<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  {% endif }
+{% endfor }</code></pre></figure>
+
+<p>This code would iterate over every subpage for a particular page and for any whose name contained the word “Question”, that page’s headline would be displayed as a list item link to the page.</p>
+
+<p>When it comes to Liquid logic, keep it simple and separated in clean chunks. If it helps, draw or write out your process in pseudo code. Think explicitly about what you want to end with and what you’re able to target to begin with. Pretty soon, you’ll find for loops and conditionals useful thinking tools for any problem.</p>
+
+<h2 id="images-assets-and-scripts">Images, Assets, and Scripts</h2>
+
+<p>Now let’s look at some useful concepts and techniques for working with images and subpages.</p>
+
+<p><img src="../images/assets.png" alt="images and assets" class="full-width" /></p>
+
+<p>All images or assets used for a specific page only should be uploaded to <strong>Website &gt; Template &gt; Files</strong> but any images or assets used for your overall theme should be uploaded to <strong>Website &gt; Theme &gt; Files</strong>. No path is necessary when referencing images or assets in your theme template:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"myfile.jpg"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">.example { background-image: url('myfile.jpg'); }</code></pre></figure>
+
+<p>Upload script files here too and then reference them at the bottom but inside the body tag in <strong>layout.html</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"fancyzoom.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>If you need to link a file to an absolute URL, upload the file to NationBuilder, then right click on it and choose <strong>Copy Link Address</strong>. That link will look something like this:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">https://nationslug.nationbuilder.com/assets/pages/1/filename.jpg</code></pre></figure>
+
+<p>If you are referencing an image or file within a <code class="language-plaintext highlighter-rouge">&lt;script&gt;</code> tag, upload the file to <strong>Website &gt; Theme &gt; Files</strong> and use the following code:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{{ theme['myfile.jpg'] }}</code></pre></figure>
+
+<h3 id="attachments-vs-meta-images">Attachments vs Meta Images</h3>
+
+<p>An attachment is a file that is uploaded to the <strong>Files</strong> section of a page. The meta image is defined under the <strong>Social Media</strong> section of the <strong>Page Settings</strong> tab, and is used primarily to define a meta image for use when sharing on Facebook, Twitter, etc. A page can have only one meta image, but can have multiple attachments.</p>
+
+<p><a href="http://nationbuilder.com/liquid_template_examples#imagefeed" target="_blank">These snippets</a> can be used to display images from a page when you don’t know the filename but know that the files will be attachments on that page, which is why they’re housed in for loops.</p>
+
+<h2 id="subpages">Subpages</h2>
+
+<p><img src="../images/subpages.png" alt="subpages" class="full-width" /></p>
+
+<p>When dealing with subpages, you can loop through them to display each one or elements from each one on the main parent page. You’d be accessing the <code>page.children</code> object by means of a for loop. So you’d place this in the parent page’s template:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for page in page.children %}
+  {{ page.slug }}
+{% endfor %}</code></pre></figure>
+
+<p>The above code would list the slug of each subpage.</p>
+
+<h4 id="subpage-example-1">Subpage Example 1</h4>
+
+<p>You could use the <code>{% subpage %}</code> tag to access an attachment on another page. If the attachment is on <strong>page1</strong> and you want to call it on <strong>page2</strong>, put this line on <strong>page2</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% subpage "page1" with "partial_attachment_include" %}</code></pre></figure>
+
+<p>and then <strong>_partial_attachment_include.html</strong> would contain:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for attachment in page.attachments %}
+  {% if attachment.url contains "header" %}
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ attachment.url }}"</span><span class="nt">&gt;</span>
+  {% endif %}
+{% endfor %}</code></pre></figure>
+
+<p>In this case, <strong>page2</strong> would see the subpage command, run <strong>page1</strong> through the logic in the above HTML snippet, which would cycle through <strong>page1</strong>’s attachments, and only render if an <strong>attachment.url</strong> included “header”.</p>
+
+<h4 id="subpage-example-2">Subpage Example 2</h4>
+
+<p>If you have an image named <strong>header.jpg</strong> in the files section of a page with slug <strong>page_a</strong>, you could create a file named <strong>_partial_image_call.html</strong> which contained:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"{{ page['header.jpg'] }}"</span> <span class="nt">/&gt;</span></code></pre></figure>
+
+<p>and that would allow you to call that image from anywhere else by putting this line on any page you wanted the image to appear:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% subpage 'page_a' with 'partial_image_call' %}</code></pre></figure>
+
+<p>You can only use the line in that partial in conjunction with the <strong>subpage</strong> call but note that the <strong>subpage</strong> tag does not require that a page be the child of another to work.</p>
+
+<p>And there you have an overview on where to store images and assets on NationBuilder and how to call them up no matter what page you’re on. Next, let’s go over how to handle users taking action on your site.</p>
+
+<h2 id="signups-and-actions">Signups and Actions</h2>
+
+<p>We’ll start in the NationBuilder Control Panel, where you can customize action settings for any action page type.</p>
+
+<h3 id="action-settings">Action Settings</h3>
+
+<p><img src="../images/members.png" alt="members" class="full-width" /></p>
+
+<p>Many NationBuilder page types allow for visitors to take an action like sign a petition, make a donation, or RSVP to an event. And for each action, there are settings you can control by going to <strong>[Page name] &gt; Settings &gt; [Action] settings</strong>. So for a page with page type <strong>Signup</strong>, that tab would be labeled <strong>Signup settings</strong>.</p>
+
+<p>This is where you can do things like automatically add tags to any person who takes an action on your website. For more info, go <a href="http://nationbuilder.com/how_pages_work#action" target="_blank">here</a>.</p>
+
+<p>To add or remove a tag associated with a signup form, go to: <strong>Signup settings &gt; Radio buttons</strong>. You can allow users to select multiple tags here: <strong>Signup settings &gt; Basics</strong> in which case the <strong>Radio buttons</strong> section will be renamed <strong>Checkboxes</strong>. For more info, check out how to <a href="http://nationbuilder.com/how_to_signup#create" target="_blank">create a new tag for a signup form</a>.</p>
+
+<h2 id="data-and-forms">Data and Forms</h2>
+
+<p>NationBuilder defaults to a single input field for an address so when they are separated out into multiple fields, “require address” needs to remain unchecked in that page’s signup settings.</p>
+
+<p>This is what enables backend validation on that default one-line address input field. Therefore, it needs to be off to keep from running validation on a field that isn’t in the form.</p>
+
+<p><img src="../images/unlock.png" alt="unlock" class="full-width" /></p>
+
+<p>Very often, you’ll want a field in your form that NationBuilder doesn’t have as a default. To include such a field, you’ll need to do a bit of customizing.</p>
+
+<p>The first step to customizing forms is knowing how to direct the data to the correct place. Data from forms are either stored in one of the already existing signup fields (<a href="http://nationbuilder.com/signup_variables" target="_blank">signup variables</a>) or in <a href="http://nationbuilder.com/when_to_use_custom_fields" target="_blank">custom fields</a>. Some examples of how to implement custom fields are <a href="http://nationbuilder.com/request_custom_people_fields_on_webpages" target="_blank">here</a>.</p>
+
+<p><img src="../images/join-screenshot.png" alt="join page" class="full-width" /></p>
+
+<p>To allow users to signup for an email blast, for example, you would create a signup page (or use the existing join page) to control the settings (tag, path, followup, membership assignments, redirects after form submission, whether or not autoresponses are triggered, etc.), and then create a partial HTML template to control the form fields you’d be asking for. You’d associate the two via either the <code class="language-plaintext highlighter-rouge">subpage</code> or <code class="language-plaintext highlighter-rouge">include</code> Liquid tags.</p>
+
+<h4 id="signup-form-example">Signup Form Example</h4>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% include "signup_form" with site.signup_page %}</code></pre></figure>
+
+<p>This associates a partial HTML template (<strong>_signup_form.html</strong> in the theme files section) with the site’s default signup page. So <strong>_signup_form.html</strong> would then contain:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% if request.logged_in? %}
+  {% elsif request.sorta_logged_in? %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span>
+      Hi <span class="nt">&lt;strong&gt;</span>{{ request.current_signup.name_or_email }}.<span class="nt">&lt;/strong&gt;</span>
+      <span class="nt">&lt;br/&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"social"</span><span class="nt">&gt;</span>
+        Sign in with <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ request.facebook_connect_url }}"</span><span class="nt">&gt;</span>Facebook<span class="nt">&lt;/a&gt;</span>, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ request.twitter_connect_url }}"</span><span class="nt">&gt;</span>Twitter<span class="nt">&lt;/a&gt;</span> or <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/login"</span><span class="nt">&gt;</span>email<span class="nt">&lt;/a&gt;</span>.
+        <span class="nt">&lt;br/&gt;</span>
+        Not {{ request.current_signup.name_or_email }}? <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ request.current_signup.logout_url }}"</span><span class="nt">&gt;</span>click here<span class="nt">&lt;/a&gt;</span>.
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  {% else %}
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"email-signup form"</span><span class="nt">&gt;</span>
+      {% form_for signup %}
+        {% hidden_field_tag "page_id", page.id %}
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-errors"</span><span class="nt">&gt;</span>{% error_messages_for signup %}<span class="nt">&lt;/div&gt;</span>
+        {% email_field "email", class:"text", placeholder:"Email address", required: "required" %}{% submit_tag "Join", class:"submit-button" %}
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-submit"</span><span class="nt">&gt;&lt;/div&gt;</span>
+      {% endform_for %}
+    <span class="nt">&lt;/div&gt;</span>
+  {% endif %}</code></pre></figure>
+
+<p>The above code first checks for login status. If the user isn’t logged in, it would display only the email address field. Then, the form housed in this partial would be submitted through the associated page (default signup page in this case).</p>
+
+<p>There are a lot of moving parts in a NationBuilder website and following the chain of command can be tricky with all the partials and subpages involved. But there’s also lots of resources out there to help you figure out any task. This collection of <a href="http://nationbuilder.com/liquid_template_examples" target="_blank">Liquid Snippets</a> is mighty handy when it comes to specific, slightly more advanced functionality. Good luck!</p>
+:ET

@@ -1,0 +1,130 @@
+/* ==========================================================================
+   SCSS Variables
+   ========================================================================== */
+
+/*
+   Typography variables
+   ========================================================================== */
+
+$base-font                   	: "omnes-pro",sans-serif;
+$heading-font                	: "omnes-pro",sans-serif;
+$caption-font                	: $base-font;
+$code-font                   	: monospace;
+$alt-font                    	: $heading-font;
+
+$doc-font-size               	: 16;
+$doc-line-height             	: 24;
+
+$border-radius               	: 3px;
+
+/*
+   Color variables
+   ========================================================================== */
+
+$superlightgray               : #ebebeb;
+$white                        : #fff;
+$darkgray                     : #363C44;
+$slategray                     : #A7CDCC;
+$black                        : #000;
+
+$darkblue                     : #34314c;
+$blue                         : #65B6CF;
+$lightblue                    : #C6E4F5;
+$superlightblue               : #E1EEF6;
+
+$bluegreen                    : #11999E;
+$darkbluegreen                : #004A55;
+
+$green                        : #9AE1B2;
+
+$greenblue                    : #41D3BD;
+
+$orange                       : #F68657;
+$redorange                    : #F25F5C;
+$lightyelloworange            : #FFDA8E;
+$yelloworange                 : #FAD662;
+
+$body-color                  	: $superlightgray;
+
+$text-color                  	: $darkgray;
+$caption-color                : mix($white, $text-color, 25%);
+
+$base-color                  	: $darkgray;
+$comp-color                  	: complement($base-color);
+$border-color                	: $superlightblue;
+$link-color                  	: $darkbluegreen;
+
+$primary-color               	: $darkblue;
+$success-color               	: $greenblue;
+$warning-color               	: $orange;
+$danger-color                	: $redorange;
+$info-color                  	: $bluegreen;
+
+$table-border-color          	: $slategray;
+$table-border                	: 1px solid $table-border-color;
+$table-background            	: $slategray;
+$table-header-color          	: lighten($table-background, 80);
+$table-hover-color           	: darken($table-background, 2);
+$table-stripe-color          	: darken($table-background, 4);
+$table-stripe-color-hover    	: darken($table-stripe-color, 5);
+
+$facebook-color					      : #3b5998;
+$flickr-color					        : #ff0084;
+$foursquare-color				      : #0cbadf;
+$google-plus-color				    : #dd4b39;
+$instagram-color				      : #4e433c;
+$linkedin-color					      : #4875b4;
+$pinterest-color				      : #cb2027;
+$rss-color						        : #fa9b39;
+$tumblr-color					        : #2c4762;
+$twitter-color					      : #55acee;
+$vimeo-color					        : #1ab7ea;
+$youtube-color		            : #ff3333;
+
+
+/*
+   Form variables
+   ========================================================================== */
+
+$form-border-color           	: $border-color;
+$form-border-color-hover     	: darken($border-color, 10);
+$form-border-color-focus     	: $primary-color;
+$form-border-radius          	: $border-radius;
+$form-box-shadow             	: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+$form-box-shadow-focus       	: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-family            	: $base-font;
+$form-font-size              	: $doc-font-size;
+
+
+/*
+   Sliding menu navigation variables
+   ========================================================================== */
+
+$sliding-menu-border-color	 	 : $darkblue;
+$sliding-menu-background 		   : $darkblue;
+$sliding-menu-color 	 		     : $white;
+$sliding-menu-background-hover : $darkblue;
+$sliding-menu-color-hover	 	   : $white;
+$sliding-menu-border   			   : 1px solid $sliding-menu-border-color;
+$button-size		         	     : 30px;
+$transition						         : 0.3s; // increase this to see the transformations in slow-motion
+$sliding-menu-animation        : all 500ms cubic-bezier(.86,.01,.77,.78);
+
+/*
+   Badge variables
+   ========================================================================== */
+
+$badge-background              : $primary-color;
+$badge-dark-color              : $darkblue;
+$badge-danger-color            : $danger-color;
+$badge-info-color              : $info-color;
+$badge-warning-color           : $warning-color;
+$badge-success-color           : $success-color;
+$badge-font-color              : $white;
+
+
+/*
+   Masthead variables
+   ========================================================================== */
+
+$masthead-height: $button-size * 2;

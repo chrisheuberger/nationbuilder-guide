@@ -1,15 +1,46 @@
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# site-wide configuration
 
-# Build settings
-theme: minima
+title: A Mini Guide to NationBuilder
+description: "Radish Lab's Tips & Techniques for using the NationBuilder platform"
+logo: liquid-square-twitter.png # 120x120 px default image used for Twitter summary card
+teaser: landing-hero.png # 400x250 px default teaser image used in image archive grid
+locale: en
+url: /nationbuilder-guide
+
+# Jekyll configuration
+
+sass:
+  sass_dir: _sass
+  style: compressed
+permalink: /:categories/:title/
+kramdown:
+  toc_levels: 2..2
+highlighter: rouge
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+
+# Octopress configuration
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: article
+page_layout: article
+
+# Format titles with titlecase?
+titlecase: true
+
+# Site owner
+owner:
+  name: Chris Heuberger
+  email: chrisheuberg@gmail.com
+  twitter: "chrisbup"
+  google:
+    ad-client:
+    ad-slot:
+  bio:
+  avatar: liquid-square.png # 160x160 px image for author byline
+  disqus-shortname:
